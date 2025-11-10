@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tin bão FUNG-WONG</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        background: linear-gradient(135deg, #e0e7ff 0%, #f5e8ff 100%);
+        color: #222;
+        padding: 20px;
+        margin: 0;
+    }
+    .bao-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        border-radius: 12px;
+        padding: 20px;
+    }
+    .bao-container img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    h2 {
+    	font-size: 18px;
+        color: #4b0082;
+        text-align: center;
+    }
+    .highlight {
+        color: #c1121f;
+        font-weight: bold;
+    }
+    p {
+        line-height: 1.6;
+        text-align: justify;
+    }
+    
+    /* ================================================= */
+    /* === BẮT ĐẦU CSS CHO BẢNG DỰ BÁO BÃO (RESPONSIVE) === */
+    /* ================================================= */
+    
+    /* Lớp giúp bảng co giãn: tạo thanh cuộn ngang nếu bảng quá rộng */
+    .table-wrapper {
+        overflow-x: auto;
+    }
+    
+    .bao-table {
+        width: 100%;
+        min-width: 700px; /* Đảm bảo bảng đủ rộng để hiển thị rõ ràng trên desktop */
+        border-collapse: collapse; /* Gộp các đường viền thành 1 nét */
+        margin-top: 15px;
+        font-size: 0.9em;
+    }
+    .bao-table th, .bao-table td {
+        border: 1px solid #ccc; /* Thêm đường viền */
+        padding: 8px 5px; /* Khoảng đệm bên trong ô */
+        text-align: center;
+        vertical-align: top; /* Căn nội dung lên trên */
+    }
+    .bao-table th {
+        background-color: #f0f0f0; /* Màu nền cho tiêu đề */
+        font-weight: bold;
+        color: #4b0082;
+    }
+    /* ================================================= */
+    /* === KẾT THÚC CSS CHO BẢNG DỰ BÁO BÃO === */
+    /* ================================================= */
+     .time-info {
+    text-align: center;        /* canh giữa */
+    font-style: italic;        /* nghiêng nhẹ */
+    color: #4b0082;            /* màu tím đậm */
+}
+
+</style>
+</head>
+<body>
+    <div class="bao-container">
+        <h2>🌪️ TIN BÃO TRÊN BIỂN ĐÔNG <br>(Cơn bão số 14) – FUNG-WONG</h2>
+        <img src="img/bao.jpg" alt="Bản đồ bão FUNG-WONG">
+        <p><span class="highlight">📍 Hiện trạng:</span><br>
+        Hồi 16 giờ ngày 10/11, vị trí tâm bão ở vào khoảng 17,9 độ Vĩ Bắc; 118,8 độ Kinh Đông, trên vùng biển phía Đông khu vực Bắc Biển Đông. Sức gió mạnh nhất vùng gần tâm bão mạnh cấp 13 (134-149km/giờ), giật cấp 16. Di chuyển theo hướng Bắc Tây Bắc, tốc độ khoảng 10km/h.</p>
+        
+        <p><span class="highlight">📍 Dự báo diễn biến bão (trong 24 đến 72 giờ tới)</span></p>
+        
+        <div class="table-wrapper">
+            <table class="bao-table">
+                <thead>
+                    <tr>
+                        <th>Thời điểm dự báo</th>
+                        <th>Hướng, tốc độ</th>
+                        <th>Vị trí</th>
+                        <th>Cường độ</th>
+                        <th>Vùng nguy hiểm</th>
+                        <th>Cấp độ rủi ro thiên tai (Khu vực chịu ảnh hưởng)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>16 giờ ngày 11/11</td>
+                        <td>Bắc Tây Bắc, 10-15 km/h</td>
+                        <td>20,5N-118,3E; trên vùng biển phía Đông khu vực Bắc Biển Đông</td>
+                        <td>Cấp 13, giật cấp 16</td>
+                        <td>Vĩ tuyến 16,00N-21,50N; phía Đông kinh tuyến 116,00E</td>
+                        <td>Cấp 3: vùng biển phía Đông khu vực Bắc Biển Đông</td>
+                    </tr>
+                    <tr>
+                        <td>16 giờ ngày 12/11</td>
+                        <td>Bắc Đông Bắc khoảng 15 km/h</td>
+                        <td>23,0N-120,3E; trên vùng bờ biển phía Tây Nam đảo Đài Loan (Trung Quốc)</td>
+                        <td>Suy yếu dần. Cấp 10, giật cấp 13</td>
+                        <td>Phía Bắc vĩ tuyến 18,00N; phía Đông kinh tuyến 116,00E</td>
+                        <td>Cấp 3: vùng biển phía Đông Bắc khu vực Bắc Biển Đông</td>
+                    </tr>
+                    <tr>
+                        <td>16 giờ ngày 13/11</td>
+                        <td>Đông Bắc, 20-25 km/h</td>
+                        <td>25,7N-125,0E; trên vùng biển phía Đông Bắc khu vực Đài Loan (Trung Quốc)</td>
+                        <td>Tiếp tục suy yếu. Cấp 6, giật cấp 8</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><span class="highlight">📍 Dự báo tác động của bão:</span><br>
+        Trên biển:
+          Vùng biển phía Đông khu vực Bắc Biển Đông có gió mạnh cấp 8-10; vùng gần tâm bão đi qua mạnh cấp 11-13, giật cấp 16, sóng biển cao 5,0-8,0m, vùng gần tâm bão 8,0-10,0m. Biển động dữ dội.
+          Toàn bộ tàu thuyền hoạt động trong các vùng nguy hiểm nói trên đều có khả năng chịu tác động của dông, lốc, gió mạnh, sóng lớn.</p>   
+    </div>
+    <br>
+        <div class="time-info">TRUNG TÂM DỰ BÁO <br> KHÍ TƯỢNG THỦY VĂN QUỐC GIA <br> (Tin phát lúc: 17h00 ngày 10/11/2025)</div>
+</body>
+</html>
+
+</body>
+</html>
