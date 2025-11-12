@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tin Bão và Thời Tiết Biển Đông</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        background: linear-gradient(135deg, #e0e7ff 0%, #f5e8ff 100%);
+        color: #222;
+        padding: 20px;
+        margin: 0;
+    }
+    .bao-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .bao-container img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    h2 {
+    	font-size: 15px;
+        color: #4b0082;
+        text-align: center;
+    }
+    h3 {
+        color: #c1121f;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .highlight {
+        color: #c1121f;
+        font-weight: bold;
+    }
+    p {
+        line-height: 1.6;
+        text-align: justify;
+    }
+    
+    /* ================================================= */
+    /* === BẮT ĐẦU CSS CHO BẢNG DỰ BÁO BÃO (RESPONSIVE) === */
+    /* ================================================= */
+    
+    /* Lớp giúp bảng co giãn: tạo thanh cuộn ngang nếu bảng quá rộng */
+    .table-wrapper {
+        overflow-x: auto;
+    }
+    
+    .bao-table {
+        width: 100%;
+        min-width: 700px; /* Đảm bảo bảng đủ rộng để hiển thị rõ ràng trên desktop */
+        border-collapse: collapse; /* Gộp các đường viền thành 1 nét */
+        margin-top: 15px;
+        font-size: 0.9em;
+    }
+    .bao-table th, .bao-table td {
+        border: 1px solid #ccc; /* Thêm đường viền */
+        padding: 8px 5px; /* Khoảng đệm bên trong ô */
+        text-align: center;
+        vertical-align: top; /* Căn nội dung lên trên */
+    }
+    .bao-table th {
+        background-color: #f0f0f0; /* Màu nền cho tiêu đề */
+        font-weight: bold;
+        color: #4b0082;
+    }
+    /* ================================================= */
+    /* === KẾT THÚC CSS CHO BẢNG DỰ BÁO BÃO === */
+    /* ================================================= */
+     .time-info {
+    text-align: center;        /* canh giữa */
+    font-style: italic;        /* nghiêng nhẹ */
+    color: #4b0082;            /* màu tím đậm */
+}
+</style>
+</head>
+<body>
+    <div class="bao-container">
+        <h2>🌪️ TIN CUỐI CÙNG VỀ CƠN BÃO SỐ 14</h2>
+        <img src="img/bao.jpg" alt="Bản đồ bão FUNG-WONG">
+        <p><span class="highlight">📍 Hiện trạng:</span><br>
+        Chiều ngày 12/11/2025, bão số 14 đã đi ra ngoài Biển Đông.
+       Lúc 16 giờ 12/11, vị trí tâm bão ở vào khoảng 22,0 độ Vĩ Bắc; 120,3 độ Kinh Đông, trên vùng ven biển phía Tây Nam đảo Đài Loan (Trung Quốc). Sức gió mạnh nhất vùng gần tâm bão mạnh cấp 8 (62-74km/giờ), giật cấp 10. Di chuyển theo hướng Đông Bắc, tốc độ 10-15km/h.</p>
+        
+   
+    
+    <!-- Phần tin dự báo gió mạnh, sóng lớn và mưa dông -->
+    <div class="bao-container">
+        <h2>TIN DỰ BÁO GIÓ MẠNH, SÓNG LỚN VÀ MƯA DÔNG TRÊN BIỂN</h2>
+
+        <h3>1. Hiện trạng đã qua:</h3>
+        <p>Ở trạm Bạch Long Vĩ và trạm Lý Sơn đã có gió Đông Bắc mạnh cấp 5, có lúc cấp 6, giật cấp 7.</p>
+
+        <h3>2. Dự báo diễn biến trong 24h tới:</h3>
+
+        <div class="table-wrapper">
+            <table class="bao-table">
+                <thead>
+                    <tr>
+                        <th>Thời điểm dự báo</th>
+                        <th>Vùng biển ảnh hưởng</th>
+                        <th>Gió mạnh<br>(Cấp gió - cấp Bô-pho)</th>
+                        <th>Hướng</th>
+                        <th>Độ cao sóng (mét)</th>
+                        <th>Hướng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chiều và đêm 13/11</td>
+                        <td>Vùng biển phía Đông Bắc khu vực Bắc Biển Đông</td>
+                        <td>Mạnh dần lên cấp 6–7, giật cấp 8–9. Biển động mạnh.</td>
+                        <td>Đông Bắc</td>
+                        <td>3,0–5,0</td>
+                        <td>Đông Bắc</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày 13/11</td>
+                        <td>Vùng biển từ Gia Lai đến Lâm Đồng</td>
+                        <td>Mạnh dần lên cấp 6, có lúc cấp 7, giật cấp 8–9. Biển động mạnh.</td>
+                        <td>Đông Bắc</td>
+                        <td>2,0–4,0</td>
+                        <td>Đông Bắc</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày 13/11</td>
+                        <td>Vùng biển từ Đà Nẵng đến Quảng Ngãi</td>
+                        <td>Cấp 5, có lúc cấp 6, giật cấp 7–8. Biển động.</td>
+                        <td>Đông Bắc</td>
+                        <td>2,0–3,0</td>
+                        <td>Đông Bắc</td>
+                    </tr>
+                    <tr>
+                        <td>Chiều tối và đêm 13/11</td>
+                        <td>Vùng biển từ TP. Hồ Chí Minh đến Cà Mau và vùng biển phía Tây khu vực Nam Biển Đông (bao gồm phía Tây đặc khu vực Trường Sa)</td>
+                        <td>Cấp 6, có lúc cấp 7, giật cấp 8. Biển động mạnh.</td>
+                        <td>Đông Bắc</td>
+                        <td>2,0–4,0</td>
+                        <td>Đông Bắc</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>Ngoài ra, ngày và đêm 13/11, khu vực Nam Biển Đông (bao gồm đặc khu Trường Sa), vùng biển từ Cà Mau đến An Giang và vịnh Thái Lan có mưa rào rải rác và có nơi có dông. Trong mưa dông có khả năng xảy ra lốc xoáy và gió giật mạnh.</p>
+
+        <h3>3. Cảnh báo:</h3>
+        <p>Ngày và đêm 14/11, vùng biển phía Bắc khu vực Bắc Biển Đông có gió Đông Bắc mạnh cấp 6, có lúc cấp 7, giật cấp 8–9, sóng biển cao 3,0–5,0 m, biển động mạnh; vùng biển từ Quảng Ngãi đến Cà Mau có gió Đông Bắc mạnh cấp 6, ngày có lúc cấp 7, giật cấp 8, sóng biển cao 2,0–4,0 m, biển động mạnh; vùng biển phía Tây khu vực Nam Biển Đông (bao gồm phía Tây đặc khu Trường Sa) ngày 14/11 có gió Đông Bắc mạnh cấp 6, giật cấp 7–8, sóng biển cao 2,0–4,0 m, biển động.</p>
+
+        <h3>4. Cấp độ rủi ro thiên tai trên biển:</h3>
+        <p><b>Cấp 2</b></p>
+
+        <h3>5. Dự báo tác động:</h3>
+        <p>Toàn bộ tàu thuyền hoạt động trên các khu vực trên đều có nguy cơ cao chịu tác động của gió mạnh và sóng lớn.</p>
+    </div>
+    
+    <div class="time-info">TRUNG TÂM DỰ BÁO KHÍ TƯỢNG THỦY VĂN QUỐC GIA</div>
+</body>
+</html>
