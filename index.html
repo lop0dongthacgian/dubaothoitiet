@@ -14,18 +14,12 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #b8a6ff 0%, #d9b9ff 100%);
     min-height: 100vh;
     padding: 20px;
 }
 
-    min-height: 100vh;
-    padding: 20px;
-}
-
-  /.container {
+.container {
     max-width: 900px;
     margin: 0 auto;
     background: white;
@@ -35,24 +29,44 @@ body {
 }
 
 .header {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background: url('img/bao.gif') no-repeat center center;
+    background-size: cover;
     color: white;
-    padding: 30px;
+    padding: 60px 30px;
     text-align: center;
+    position: relative;
+}
+
+/* Lớp phủ màu để chữ dễ nhìn hơn */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(11, 99, 214, 0.2);
+    z-index: 1;
+}
+
+/* Đảm bảo văn bản nằm trên lớp nền */
+.header > * {
+    position: relative;
+    z-index: 2;
 }
 
 .header h1 {
     font-size: 62px;
     margin-bottom: 10px;
-    text-shadow: 
-        1px 1px 0 rgba(255, 0, 0, 0.8),
-        1px 1px 1px rgba(0,0,0,0.9);
+    color: #FFD700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     padding: 2px 0;
 }
 
 .header p {
     font-size: 16px;
     opacity: 0.9;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
 /* 🌟 Dòng chữ chạy áp dụng cho mọi thiết bị */
@@ -67,13 +81,12 @@ body {
     padding: 0px 0;
 }
     
-    .marquee-text1 {
+.marquee-text1 {
     color: #004FFF;
     font-weight: bold;
     font-size: 25px;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
     margin: 5px 0 8px 0;
-    
 }
 
 .content {
@@ -424,6 +437,7 @@ body {
     border-color: #cc0000;
     color: #cc0000;
 }
+
 #pdf-close:hover {
     background: #cc0000;
     color: white;
@@ -717,9 +731,9 @@ body {
         padding: 12px;
     }
 }
-     /* Counter styles */
-/.counter-container {
-    /* Đảm bảo container nằm trên một nền tối (như footer) */
+
+/* Counter styles */
+.counter-container {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); 
     padding: 15px 0;
     margin-top: 20px;
@@ -731,29 +745,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Khoảng cách giữa nhãn và số đếm */
+    gap: 10px;
     color: white;
     font-size: 16px;
     font-weight: 600;
 }
 
- .counter-label {
+.counter-label {
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
- .counter-number {
-    /* Khung bao quanh huy hiệu số đếm */
+
+.counter-number {
     background: rgba(255, 255, 255, 0.2);
-    padding: 10px 25px; /* Tăng padding để khung lớn hơn */
+    padding: 10px 25px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    
-    /* Căn giữa hình ảnh huy hiệu */
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    /* Giữ nguyên kiểu chữ cũ */
     color: rgba(255, 255, 255, 0.3); 
     font-weight: bold;
     font-size: 18px;
@@ -1273,3 +1283,4 @@ body {
 </body>
 
 </html>
+
