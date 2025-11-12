@@ -15,9 +15,9 @@
         header {
             background: url('img/bao1.jpg') no-repeat center center; /* Dùng ảnh làm nền */
             background-size: cover; /* Phủ kín header */
-            color: #fff;
+            color: #fff; /* Màu chữ mặc định cho header */
             text-align: center;
-            padding: 60px 15px; /* Tăng padding để có không gian cho nội dung */
+            padding: 60px 15px; /* Điều chỉnh padding nếu cần */
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             position: relative; /* Để thêm lớp phủ nếu cần */
             margin-bottom: 0; /* Loại bỏ margin dưới */
@@ -42,14 +42,15 @@
         }
 
         header h1 {
-            font-size: 26px;
+            font-size: 32px; /* Cỡ chữ tiêu đề - bạn có thể thay đổi số này */
+            color: #FFD700; /* Màu chữ tiêu đề - ví dụ: vàng (Gold) - bạn có thể thay đổi */
             margin-bottom: 5px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Làm nổi chữ hơn */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Tạo hiệu ứng viền cho chữ rõ hơn trên nền */
         }
         header p {
             font-size: 15px;
             opacity: 0.9;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Tạo hiệu ứng viền cho chữ rõ hơn */
         }
         main {
             max-width: 900px;
@@ -129,7 +130,7 @@
         }
         @media (max-width: 600px) {
             header h1 {
-                font-size: 22px;
+                font-size: 28px; /* Cỡ chữ nhỏ hơn trên mobile */
             }
             .step-list {
                 grid-template-columns: 1fr;
