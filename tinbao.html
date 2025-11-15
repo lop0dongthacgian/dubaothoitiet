@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Tin dự báo mưa lớn - Thông báo thời tiết</title>
   <style>
-    /* Kiểu cơ bản, sẵn sàng in A4 */
-    :root{
-      --main-font: "Times New Roman", Times, serif;
-      --accent: #0b5ea8;
-    }
+    @page { size: A4; margin: 20mm; }
+    html,body{height:100%;}
     body{
-      font-family: var(--main-font);
-      margin: 24px;
-      color: #111;
-      line-height: 1.45;
+      font-family: 'Times New Roman', Times, serif;
+      margin:0;
+      padding:0 40px;
+      box-sizing:border-box;
+      background:white;
+      color:#000;
     }
     header{
       text-align: center;
