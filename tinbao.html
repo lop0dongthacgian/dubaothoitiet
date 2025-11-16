@@ -1,158 +1,82 @@
 <!doctype html>
+
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tin dự báo mưa lớn - Thông báo thời tiết</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dự báo mưa lớn - Hà Tĩnh đến Lâm Đồng</title>
   <style>
-    @page { size: A4; margin: 20mm; }
-    html,body{height:100%;}
-    body{
-      font-family: 'Times New Roman', Times, serif;
-      margin:0;
-      padding:0 40px;
-      box-sizing:border-box;
-      background:white;
-      color:#000;
-    }
-    header{
-      text-align: center;
-      margin-bottom: 18px;
-    }
-    h1{
-      font-size: 22px;
-      letter-spacing: 1px;
-      margin: 0 0 6px 0;
-      text-transform: uppercase;
-    }
-    .meta{
-      font-size: 13px;
-      color: #333;
-      margin-bottom: 12px;
-    }
-    section{
-      margin-bottom: 14px;
-    }
-    section h2{
-      font-size: 16px;
-      margin: 8px 0;
-    }
-    p{ margin: 6px 0; }
-    .important{ font-weight: 700; color: #a00; }
-    table{
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 8px;
-      font-size: 14px;
-    }
-    table th, table td{
-      border: 1px solid #444;
-      padding: 8px;
-      vertical-align: top;
-    }
-    table th{
-      background: #efefef;
-      text-align: left;
-    }
-    .map {
-      display:block;
-      margin: 14px auto;
-      max-width: 420px;
-      border: 1px solid #ccc;
-      padding: 6px;
-      text-align: center;
-    }
-    .actions{
-      margin-top: 18px;
-      text-align: right;
-    }
-    .btn{
-      padding: 8px 12px;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-    }
-    .btn-primary{ background: var(--accent); color: white; }
-    .btn-outline{ background: white; color: var(--accent); border: 1px solid var(--accent); }
-    /* In A4: bỏ margin trình duyệt */
-    @media print {
-      body{ margin: 10mm; }
-      .actions{ display:none; }
-    }
+    :root{--accent:#0b5;--muted:#666}
+    body{font-family: "Times New Roman", Georgia, serif;line-height:1.45;margin:0;padding:20px;background:#f8f8f8;color:#111}
+    .container{max-width:900px;margin:28px auto;background:#fff;padding:40px 34px 50px 34px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    h1{text-align:center;margin:0 0 18px;font-size:20px;letter-spacing:1px}
+    h2{font-size:16px;margin:18px 0 8px}
+    p{margin:10px 0}
+    .lead{font-weight:700}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    table,td,th{border:1px solid #222}
+    th,td{padding:10px;text-align:left}
+    th{background:#eee}
+    .warn{font-weight:700}
+    .important{background:#fff7cd;padding:12px;border-left:4px solid #ff8c00;margin:12px 0}
+    footer{margin-top:20px;font-size:13px;color:var(--muted)}
+    @media (max-width:640px){.container{padding:18px}}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Tin dự báo mưa lớn ở khu vực từ Hà Tĩnh đến Khánh Hòa</h1>
-    <div class="meta">Ngày phát hành: <strong id="ngay-phat-hanh">16/11/2025</strong> — Nguồn: Cục Khí tượng Thủy văn (mẫu)</div>
-  </header>
+  <div class="container">
+    <h1>TIN DỰ BÁO MƯA LỚN Ở KHU VỰC TỪ HÀ TĨNH ĐẾN LÂM ĐỒNG</h1><h2>1. Diễn biến mưa trong 24 giờ qua</h2>
+<p>Đêm qua và sáng sớm nay (17/11), khu vực từ Hà Tĩnh đến Tp. Đà Nẵng, phía Đông các tỉnh từ Quảng Ngãi đến Đắk Lắk, Khánh Hòa và Lâm Đồng có mưa vừa, mưa to, cục bộ có nơi mưa rất to. Lượng mưa tính từ 19h ngày 16/11 đến 03h ngày 17/11 có nơi trên 220mm như: trạm Thủy điện Bình Điền (Tp. Huế) 332.4mm, trạm Ba Điền (Quảng Ngãi) 263.8mm, trạm Phước Trà (Tp. Đà Nẵng) 255mm, trạm Tà Rụt (Quảng Trị) 244.2mm, Trạm Sông Hinh (Đắk Lắk) 240.4mm, trạm Khánh Vũ (Khánh Hòa) 238.0mm,…</p>
 
-  <section id="dien-bien">
-    <h2>1. Diễn biến mưa trong 24 giờ qua</h2>
-    <p>
-      Đêm qua và sáng sớm nay, khu vực từ Hà Tĩnh đến Khánh Hòa có mưa, mưa rào rải rác, cục bộ có nơi mưa vừa, mưa to.
-      Một số trạm đo có tổng lượng mưa lớn trong 24 giờ qua (ví dụ): trạm Hoàng Sơn (Hà Tĩnh) 32.4 mm, trạm Đập thủy điện La Tó (Quảng Trị) 53.4 mm, trạm Đình Bạch Mã (Tp. Huế) 35.2 mm.
-    </p>
-  </section>
+<h2>2. Dự báo diễn biến mưa lớn trong 24-48 giờ tới</h2>
+<p>Từ sáng sớm ngày 17/11 đến đêm 18/11:</p>
+<ul>
+  <li>Khu vực từ Quảng Trị đến Tp. Đà Nẵng, phía Đông các tỉnh Quảng Ngãi và Gia Lai có mưa to đến rất to với lượng mưa phổ biến từ <strong>200-450mm</strong>, cục bộ có nơi trên <strong>700mm</strong>.</li>
+  <li>Khu vực Hà Tĩnh, phía Đông tỉnh Đắk Lắk, Khánh Hòa có mưa to, cục bộ có nơi mưa rất to với lượng mưa phổ biến <strong>100-300mm</strong>, cục bộ có nơi trên <strong>400mm</strong>.</li>
+  <li>Phía Tây các tỉnh từ Quảng Ngãi đến Đắk Lắk, khu vực tỉnh Lâm Đồng có mưa vừa, mưa to với lượng mưa phổ biến từ <strong>50-100mm</strong>, cục bộ có nơi mưa rất to trên <strong>200mm</strong>.</li>
+</ul>
 
-  <section id="du-bao-24-48">
-    <h2>2. Dự báo diễn biến mưa lớn trong 24-48 giờ tới</h2>
-    <p>Từ sáng sớm <strong>16/11</strong> đến sáng sớm <strong>18/11</strong> dự báo:</p>
-    <ul>
-      <li>Khu vực từ Quảng Trị đến Tp. Đà Nẵng, phía Đông các tỉnh Quảng Ngãi và Gia Lai có mưa to đến rất to với lượng mưa phổ biến <strong>200-400 mm</strong>, cục bộ có nơi trên <strong>550 mm</strong>.</li>
-      <li>Khu vực Hà Tĩnh, phía Đông tỉnh Đắk Lắk, Khánh Hòa có mưa to, cục bộ có nơi lượng mưa phổ biến <strong>100-250 mm</strong>, có nơi trên <strong>350 mm</strong>.</li>
-      <li>Từ 16/11 đến hết đêm 17/11, phía Tây các tỉnh từ Quảng Ngãi đến Đắk Lắk có mưa vừa đến mưa to với lượng mưa phổ biến <strong>60-120 mm</strong>, cục bộ có nơi rất to trên <strong>200 mm</strong>.</li>
-    </ul>
+<p class="warn">Cảnh báo nguy cơ mưa có cường độ lớn (&gt;200mm/3h).</p>
 
-    <p class="important">Cảnh báo: Nguy cơ mưa có cường độ lớn (>200 mm/3h) tại một số nơi.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Thời gian ảnh hưởng</th>
+      <th>Khu vực</th>
+      <th>Tổng lượng (mm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">Từ sáng sớm ngày 17/11 đến đêm 18/11</td>
+      <td>Từ Quảng Trị đến Tp. Đà Nẵng, phía Đông các tỉnh Quảng Ngãi và Gia Lai</td>
+      <td>200-450, cục bộ có nơi trên 700</td>
+    </tr>
+    <tr>
+      <td>Hà Tĩnh, phía Đông tỉnh Đắk Lắk, Khánh Hòa</td>
+      <td>100-300, cục bộ có nơi trên 400</td>
+    </tr>
+    <tr>
+      <td>Phía Tây các tỉnh từ Quảng Ngãi đến Đắk Lắk, khu vực tỉnh Lâm Đồng</td>
+      <td>50-100, cục bộ có nơi trên 200</td>
+    </tr>
+  </tbody>
+</table>
 
-    <table aria-label="Dự báo chi tiết">
-      <thead>
-        <tr>
-          <th style="width:22%">Thời gian ảnh hưởng</th>
-          <th style="width:52%">Khu vực</th>
-          <th style="width:26%">Tổng lượng (mm)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Sáng sớm 16/11 đến sáng sớm 18/11</td>
-          <td>Từ Quảng Trị đến Tp. Đà Nẵng, phía Đông các tỉnh Quảng Ngãi và Gia Lai</td>
-          <td>200-400, cục bộ có nơi trên 550</td>
-        </tr>
-        <tr>
-          <td>Sáng sớm 16/11 đến sáng sớm 18/11</td>
-          <td>Hà Tĩnh, phía Đông tỉnh Đắk Lắk, Khánh Hòa</td>
-          <td>100-250, cục bộ có nơi trên 350</td>
-        </tr>
-        <tr>
-          <td>Ngày 16/11 đến hết đêm 17/11</td>
-          <td>Phía Tây các tỉnh từ Quảng Ngãi đến Đắk Lắk</td>
-          <td>60-120, cục bộ có nơi trên 200</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+<p>Ngoài ra, ngày và đêm 17/11, khu vực Nam Bộ có mưa vừa và dông, cục bộ có nơi mưa to đến rất to với lượng mưa phổ biến từ 20-40mm, cục bộ có nơi trên 80mm. Trong mưa dông có khả năng xảy ra lốc, sét, mưa đá và gió giật mạnh.</p>
 
-  <section id="canh-bao">
-    <h2>3. Cảnh báo</h2>
-    <p>Trong mưa dông có khả năng xảy ra lốc, sét, mưa đá và gió giật mạnh.</p>
-    <p class="important">
-      Ngày và đêm 18/11, khu vực Tp. Huế, Tp. Đà Nẵng, phía Đông các tỉnh Quảng Ngãi và Gia Lai có mưa to đến rất to (100-200 mm), cục bộ có nơi trên 300 mm; khu vực từ Hà Tĩnh đến Quảng Trị, phía Đông tỉnh Đắk Lắk, Khánh Hòa 50-100 mm, cục bộ trên 150 mm.
-    </p>
-  </section>
+<h2>3. Cảnh báo</h2>
+<p>Ngày và đêm 19/11, khu vực Tp. Huế, Tp. Đà Nẵng, phía Đông các tỉnh Quảng Ngãi đến Đắk Lắk, Khánh Hòa có mưa to đến rất to với lượng mưa phổ biến từ 70-150mm, cục bộ có nơi trên 250mm; khu vực Quảng Trị, phía Tây các tỉnh từ Quảng Ngãi đến Đắk Lắk có mưa vừa, mưa to với lượng mưa phổ biến từ 20-50mm, cục bộ có nơi mưa rất to trên 100mm.</p>
 
-  <section id="tac-dong">
-    <h2>4. Dự báo tác động của mưa lớn</h2>
-    <p>
-      Mưa lớn có khả năng gây ngập úng ở vùng trũng, thấp, khu đô thị, công nghiệp; lũ quét trên sông, suối nhỏ; sạt lở đất trên sườn dốc.
-      Thông tin cảnh báo khu vực nguy cơ lũ quét, sạt lở đất thời gian thực được cung cấp trên trang thông tin điện tử chuyên ngành.
-    </p>
-    <p>Tham khảo thêm: <a href="https://luquetsatlo.nchmf.gov.vn" target="_blank" rel="noopener">Cảnh báo lũ quét & sạt lở</a></p>
-  </section>
-  <script>
-    
-  </script>
+<div class="important">
+  <p><strong>Từ ngày 20/11</strong>, mưa lớn diện rộng tiếp tục xảy ra ở khu vực Tp. Đà Nẵng, các tỉnh từ Quảng Ngãi đến Khánh Hòa; từ ngày 22/11 mưa lớn có xu hướng giảm dần.</p>
+  <p class="warn">4. Cảnh báo cấp độ rủi ro thiên tai do mưa lớn, lốc, sét, mưa đá: <strong>cấp 1</strong>, riêng khu vực từ Quảng Trị đến Tp. Đà Nẵng, phía Đông các tỉnh Quảng Ngãi và Gia Lai <strong>cấp 2</strong>.</p>
+</div>
+<h2>5. Dự báo tác động của mưa lớn</h2>
+<p>Mưa lớn có khả năng gây ra tình trạng ngập úng tại các vùng trũng, thấp, khu đô thị, công nghiệp; lũ quét trên các sông, suối nhỏ, sạt lở đất trên sườn dốc.</p>
+
+<p><em>(Thông tin cảnh báo khu vực nguy cơ lũ quét, sạt lở đất thời gian thực được cung cấp trực tuyến trên trang thông tin điện tử của Cục Khí tượng Thủy văn tại địa chỉ: <a href="https://luquetsatlo.nchmf.gov.vn" target="_blank" rel="noopener">https://luquetsatlo.nchmf.gov.vn</a> và trong bản tin riêng cảnh báo lũ quét, sạt lở đất).</em></p>
+
+  </div>
 </body>
 </html>
