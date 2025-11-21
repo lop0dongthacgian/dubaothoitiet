@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tin dự báo mưa lớn</title>
+<style>
+  body {
+    font-family: "Times New Roman", serif;
+    background-color: #e8f2ff;
+    margin: 0;
+    padding: 15px;
+  }
+  .weather-report {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    max-width: 850px;
+    margin: 0 auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    line-height: 1.6;
+  }
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-size: 15px;
+    margin-top: 20px;
+    color: #003366;
+  }
+  p {
+    margin: 6px 0;
+    text-align: justify;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 15px 0;
+  }
+  th, td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #dce9ff;
+  }
+  .note {
+    font-style: italic;
+  }
+  .footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 11px;
+    border-top: double 4px #0d2bbf;
+    border-bottom: double 4px #0d2bbf;
+  }
+  a {
+    color: #0047ab;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .img-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.img-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+.img-wrapper .caption {
+    position: absolute;
+    bottom: 10px;      /* đặt vị trí */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black; /* giúp chữ nổi bật */
+    padding: 4px 0;
+}
+</style>
+</head>
+<body>
+	
+<div class="weather-report">
+  
+   <div class="img-wrapper">
+    <img src="img/5bao.gif" alt="Hình trang">
+    <div class="caption">TIN DỰ BÁO MƯA LỚN Ở TP. HUẾ, <br> PHÍA ĐÔNG CÁC TỈNH TỪ TP. ĐÀ NẴNG <br> ĐẾN ĐẮK LẮK VÀ KHÁNH HÒA</div>
+</div>
+  <h3>1. Diễn biến mưa trong 24 giờ qua</h3>
+  <p><b>Đêm qua và sáng sớm nay (22/11):</b><br> ở phía Đông các tỉnh từ Gia Lai đến Đắk Lắk 
+và Khánh Hòa có mưa, mưa rào và có nơi có dông, cục bộ có nơi mưa to với lượng
+mưa tính từ 19 giờ ngày 21/11 đến 03 giờ ngày 22/11 như trạm: Sông Hinh 4 (Đắk 
+Lắk) 36.4mm,…</p>
+
+  <h3>2. Dự báo diễn biến mưa lớn trong 24-48 giờ tới</h3>
+  <p><b>Ngày và đêm 22/11:</b><br>
+  Phía Đông các tỉnh từ Quảng Ngãi đến Đắk Lắk và phía 
+Bắc Khánh Hòa có mưa vừa, mưa to, cục bộ có nơi mưa rất to với lượng mưa phổ biến 
+từ 30-60mm, cục bộ có nơi trên 120mm.
+Ngày và đêm 23/11, khu vực Tp. Huế và phía Đông các tỉnh từ Tp. Đà Nẵng đến 
+Gia Lai có mưa vừa, mưa to, cục bộ có nơi mưa rất to với lượng mưa phổ biến từ 30-
+70mm, cục bộ có nơi trên 120mm.
+Cảnh báo nguy cơ mưa có cường độ lớn (>80mm/3h).</p>
+
+  <p><b>Ngày và đêm 23/11:</b><br>
+  Khu vực Tp. Huế và phía Đông các tỉnh từ Tp. Đà Nẵng đến 
+Gia Lai có mưa vừa, mưa to, cục bộ có nơi mưa rất to với lượng mưa phổ biến từ 30-
+70mm, cục bộ có nơi trên 120mm.
+Cảnh báo nguy cơ mưa có cường độ lớn (>80mm/3h).<br>
+  Cảnh báo nguy cơ mưa có cường độ lớn (>80mm/3h).</p>
+
+  <table>
+    <tr>
+      <th>Thời gian ảnh hưởng</th>
+      <th>Khu vực</th>
+      <th>Tổng lượng (mm)</th>
+    </tr>
+    <tr>
+      <td>Ngày và đêm 22/11</td>
+      <td>Phía Đông các tỉnh từ Quảng Ngãi đến Đắk Lắk và Khánh Hòa</td>
+      <td>30-60, cục bộ có nơi trên 120</td>
+    </tr>
+    <tr>
+      <td>Ngày và đêm 23/11</td>
+      <td>Tp. Huế, phía Đông các tỉnh từ Tp. Đà Nẵng đến Gia Lai</td>
+      <td>30-70, cục bộ có nơi trên 130</td>
+    </tr>
+  </table>
+
+  <p><b>Cảnh báo:</b> ngày 24/11, ở Tp. Huế và phía Đông các tỉnh từ Tp. Đà Nẵng đến Gia Lai có mưa vừa, mưa to với lượng mưa phổ biến từ 20-40mm, cục bộ có nơi mưa rất to trên 70mm. Từ đêm 24/11 mưa lớn ở Trung Bộ có xu hướng giảm dần.</p>
+
+  <h3>3. Cảnh báo cấp độ rủi ro thiên tai do mưa lớn, lốc, sét, mưa đá:</h3>
+  <p><b>Cấp 1.</b></p>
+
+  <h3>4. Dự báo tác động của mưa lớn</h3>
+  <p>Mưa lớn có khả năng gây ra tình trạng ngập úng tại các vùng trũng, thấp, khu đô thị, công nghiệp; lũ quét trên các sông, suối nhỏ, sạt lở đất trên sườn dốc</p>
+
+  <p class="note">Thông tin cảnh báo khu vực nguy cơ lũ quét, sạt lở đất thời gian thực được cung cấp trực tuyến trên trang thông tin điện tử của Cục Khí tượng Thủy văn tại địa chỉ: 
+  <a href="https://luquetsatlo.nchmf.gov.vn" target="_blank">https://luquetsatlo.nchmf.gov.vn</a> và trong bản tin riêng cảnh báo lũ quét, sạt lở đất.</p>
+
+  <div class="footer">Trung tâm Dự báo Khí tượng Thủy văn Quốc gia <br> Tin phát lúc 03g30 ngày 22/11/2025</div>
+</div>
+
+</body>
+</html>
