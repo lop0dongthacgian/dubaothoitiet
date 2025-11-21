@@ -65,13 +65,34 @@
   a:hover {
     text-decoration: underline;
   }
+  .image-box {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-box figcaption {
+    font-size: 12px;      /* chỉnh cỡ chữ */
+    color: #0047b3;       /* chỉnh màu chữ */
+    font-weight: 600;     /* chữ đậm */
+    margin-top: 6px;      /* khoảng cách với hình */
+}
 </style>
 </head>
 <body>
 	
 <div class="weather-report">
   <h2>TIN DỰ BÁO MƯA LỚN Ở PHÍA ĐÔNG CÁC TỈNH TỪ TP. ĐÀ NẴNG ĐẾN ĐẮK LẮK<br>VÀ PHÍA BẮC TỈNH KHÁNH HÒA</h2>
-   <img src="img/img.jpg" alt="Hình trang" style="width:100%; height:auto; display:block; margin:0; padding:0;">
+   <figure class="image-box">
+    <img src="img/img.jpg" alt="Hình trang">
+    <figcaption>Bản đồ dự báo lượng mưa tích lũy 24 giờ</figcaption>
+</figure>
   <h3>1. Diễn biến mưa trong 24 giờ qua</h3>
   <p>Đêm qua và sáng sớm nay (21/11), phía Đông các tỉnh từ Quảng Ngãi đến Đắk Lắk và phía Bắc tỉnh Khánh Hòa có mưa vừa, mưa to, cục bộ có nơi mưa rất to. Lượng mưa tính từ 19 giờ ngày 20/11 đến 03 giờ ngày 21/11 phổ biến từ 20-60mm, cục bộ có nơi trên 100mm như trạm: Sông Hinh 4 (Đắk Lắk) 127.2mm, Đại Lãnh (Khánh Hòa) 103.6mm, Hồ Hoa Sơn (Khánh Hòa) 102.0mm, …</p>
 
@@ -119,4 +140,3 @@
 
 </body>
 </html>
-
