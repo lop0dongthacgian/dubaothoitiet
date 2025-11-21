@@ -65,28 +65,31 @@
   a:hover {
     text-decoration: underline;
   }
+
   .img-wrapper {
     position: relative;
     width: 100%;
-}
+  }
 
-.img-wrapper img {
+  .img-wrapper img {
     width: 100%;
     display: block;
-}
+  }
 
-.img-wrapper .caption {
+  /* Caption hiển thị chữ chạy */
+  #captionRun {
     position: absolute;
-    bottom: 10px;      /* đặt vị trí */
-    left: 0;
+    bottom: 10px;
     width: 100%;
     text-align: center;
     font-size: 12px;
     color: white;
     font-weight: bold;
-    text-shadow: 1px 1px 3px black; /* giúp chữ nổi bật */
+    text-shadow: 1px 1px 3px black;
     padding: 4px 0;
-}
+    white-space: pre-line;
+    visibility: hidden;
+  }
 </style>
 </head>
 <body>
@@ -95,28 +98,31 @@
   
    <div class="img-wrapper">
     <img src="img/5bao.gif" alt="Hình trang">
-    <div class="caption">TIN DỰ BÁO MƯA LỚN Ở TP. HUẾ, <br> PHÍA ĐÔNG CÁC TỈNH TỪ TP. ĐÀ NẴNG <br> ĐẾN ĐẮK LẮK VÀ KHÁNH HÒA</div>
+    
+    <!-- Caption chạy từng chữ -->
+    <div id="captionRun"></div>
 </div>
+
   <h3>1. Diễn biến mưa trong 24 giờ qua</h3>
-  <p><b>Đêm qua và sáng sớm nay (22/11):</b><br> ở phía Đông các tỉnh từ Gia Lai đến Đắk Lắk 
-và Khánh Hòa có mưa, mưa rào và có nơi có dông, cục bộ có nơi mưa to với lượng
-mưa tính từ 19 giờ ngày 21/11 đến 03 giờ ngày 22/11 như trạm: Sông Hinh 4 (Đắk 
+  <p><b>Đêm qua và sáng sớm nay (22/11):</b><br> ở phía Đông các tỉnh từ Gia Lai đến Đắk Lắk 
+và Khánh Hòa có mưa, mưa rào và có nơi có dông, cục bộ có nơi mưa to với lượng
+mưa tính từ 19 giờ ngày 21/11 đến 03 giờ ngày 22/11 như trạm: Sông Hinh 4 (Đắk 
 Lắk) 36.4mm,…</p>
 
   <h3>2. Dự báo diễn biến mưa lớn trong 24-48 giờ tới</h3>
   <p><b>Ngày và đêm 22/11:</b><br>
-  Phía Đông các tỉnh từ Quảng Ngãi đến Đắk Lắk và phía 
-Bắc Khánh Hòa có mưa vừa, mưa to, cục bộ có nơi mưa rất to với lượng mưa phổ biến 
-từ 30-60mm, cục bộ có nơi trên 120mm.
-Ngày và đêm 23/11, khu vực Tp. Huế và phía Đông các tỉnh từ Tp. Đà Nẵng đến 
-Gia Lai có mưa vừa, mưa to, cục bộ có nơi mưa rất to với lượng mưa phổ biến từ 30-
-70mm, cục bộ có nơi trên 120mm.
+  Phía Đông các tỉnh từ Quảng Ngãi đến Đắk Lắk và phía 
+Bắc Khánh Hòa có mưa vừa, mưa to, cục bộ có nơi mưa rất to với lượng mưa phổ biến 
+từ 30-60mm, cục bộ có nơi trên 120mm.
+Ngày và đêm 23/11, khu vực Tp. Huế và phía Đông các tỉnh từ Tp. Đà Nẵng đến 
+Gia Lai có mưa vừa, mưa to, cục bộ có nơi mưa rất to với lượng mưa phổ biến từ 30-
+70mm, cục bộ có nơi trên 120mm.
 Cảnh báo nguy cơ mưa có cường độ lớn (>80mm/3h).</p>
 
   <p><b>Ngày và đêm 23/11:</b><br>
-  Khu vực Tp. Huế và phía Đông các tỉnh từ Tp. Đà Nẵng đến 
-Gia Lai có mưa vừa, mưa to, cục bộ có nơi mưa rất to với lượng mưa phổ biến từ 30-
-70mm, cục bộ có nơi trên 120mm.
+  Khu vực Tp. Huế và phía Đông các tỉnh từ Tp. Đà Nẵng đến 
+Gia Lai có mưa vừa, mưa to, cục bộ có nơi mưa rất to với lượng mưa phổ biến từ 30-
+70mm, cục bộ có nơi trên 120mm.
 Cảnh báo nguy cơ mưa có cường độ lớn (>80mm/3h).<br>
   Cảnh báo nguy cơ mưa có cường độ lớn (>80mm/3h).</p>
 
@@ -151,6 +157,52 @@ Cảnh báo nguy cơ mưa có cường độ lớn (>80mm/3h).<br>
 
   <div class="footer">Trung tâm Dự báo Khí tượng Thủy văn Quốc gia <br> Tin phát lúc 03g30 ngày 22/11/2025</div>
 </div>
+
+<!-- SCRIPT CHỮ CHẠY -->
+<script>
+window.onload = function () {
+    const el = document.getElementById("captionRun");
+
+    const lines = [
+        "TIN DỰ BÁO MƯA LỚN Ở TP. HUẾ,",
+        "PHÍA ĐÔNG CÁC TỈNH TỪ TP. ĐÀ NẴNG",
+        "ĐẾN ĐẮK LẮK VÀ KHÁNH HÒA"
+    ];
+
+    function startTyping() {
+        let lineIndex = 0;
+        let charIndex = 0;
+
+        el.innerHTML = "";
+        el.style.visibility = "visible";
+
+        function type() {
+            if (lineIndex < lines.length) {
+                if (charIndex < lines[lineIndex].length) {
+                    el.innerHTML += lines[lineIndex][charIndex];
+                    charIndex++;
+                    setTimeout(type, 35);  // tốc độ chữ
+                } else {
+                    el.innerHTML += "<br>";
+                    lineIndex++;
+                    charIndex = 0;
+                    setTimeout(type, 150);
+                }
+            } else {
+                // Khi chạy xong → đợi 5 giây → chạy lại
+                setTimeout(() => {
+                    el.innerHTML = "";
+                    startTyping();
+                }, 2000);
+            }
+        }
+
+        type();
+    }
+
+    startTyping();
+};
+</script>
 
 </body>
 </html>
