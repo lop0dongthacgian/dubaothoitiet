@@ -65,36 +65,38 @@
   a:hover {
     text-decoration: underline;
   }
-  .image-box {
+  .img-wrapper {
+    position: relative;
     width: 100%;
-    margin: 10px 0;
-    text-align: center;
 }
 
-.image-box img {
+.img-wrapper img {
     width: 100%;
-    height: auto;
     display: block;
 }
 
-.image-box figcaption {
-    font-size: 12px;      /* chỉnh cỡ chữ */
-    color: #0047b3;       /* chỉnh màu chữ */
-    font-weight: 600;     /* chữ đậm */
-    margin-top: 6px;      /* khoảng cách với hình */
+.img-wrapper .caption {
+    position: absolute;
+    bottom: 10px;      /* đặt vị trí */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black; /* giúp chữ nổi bật */
+    padding: 4px 0;
 }
 </style>
 </head>
 <body>
 	
 <div class="weather-report">
-  <h2>TIN DỰ BÁO MƯA LỚN Ở TP. HUẾ, <br> PHÍA ĐÔNG CÁC TỈNH TỪ ĐÀ NẴNG <br> ĐẾN
-
-ĐẮK LẮK VÀ KHÁNH HÒA</h2>
-   <figure class="image-box">
-    <img src="img/img.jpg" alt="Hình trang">
-    <figcaption>Bản đồ dự báo lượng mưa tích lũy 24 giờ</figcaption>
-</figure>
+  
+   <div class="img-wrapper">
+    <img src="img/5bao.gif" alt="Hình trang">
+    <div class="caption">TIN DỰ BÁO MƯA LỚN Ở TP. HUẾ, <br> PHÍA ĐÔNG CÁC TỈNH TỪ TP. ĐÀ NẴNG <br> ĐẾN ĐẮK LẮK VÀ KHÁNH HÒA</div>
+</div>
   <h3>1. Diễn biến mưa trong 24 giờ qua</h3>
   <p><b>Đêm qua và sáng sớm nay (22/11):</b><br> ở phía Đông các tỉnh từ Gia Lai đến Đắk Lắk 
 và Khánh Hòa có mưa, mưa rào và có nơi có dông, cục bộ có nơi mưa to với lượng
