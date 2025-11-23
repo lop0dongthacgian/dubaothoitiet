@@ -8,94 +8,143 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            padding: 20px;
+            margin: 10px;
+            padding: 10px;
             background-color: #f9f9f9;
+            color: #333;
         }
+
+        /* Điều chỉnh tiêu đề chính cho cân đối */
         h1 {
             text-align: center;
-            font-size: 24px;
+            font-size: clamp(20px, 4vw, 28px);
             margin-bottom: 20px;
         }
+
         h2 {
-            font-size: 18px;
+            font-size: clamp(16px, 3.2vw, 20px);
             margin-top: 25px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
+
+        h3 {
+            font-size: clamp(15px, 2.8vw, 18px);
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
         .section {
             margin-bottom: 25px;
         }
+
+        /* ✅ BẢNG ĐÃ TỐI ƯU — CHỮ TỰ CO GIÃN, RÕ RÀNG MỌI MÀN HÌNH */
+        .responsive-table-wrapper {
+            overflow-x: auto;
+            margin: 15px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
-            margin: 15px 0;
-            font-size: 14px;
+            min-width: 500px; /* Ngăn bảng co quá nhỏ trên desktop */
+            font-size: clamp(14px, 2.5vw, 18px); /* ✅ TỰ ĐỘNG CO GIÃN */
+            line-height: 1.5;
         }
+
         th, td {
             border: 1px solid #ccc;
-            padding: 8px;
+            padding: 12px 10px; /* Tăng padding cho dễ đọc */
             text-align: left;
+            vertical-align: top;
         }
+
         th {
             background-color: #f2f2f2;
             font-weight: bold;
+            white-space: nowrap;
         }
+
+        td {
+            white-space: normal; /* Cho phép xuống dòng hợp lý */
+        }
+
+        /* Tối ưu trên mobile */
+        @media (max-width: 600px) {
+            body {
+                margin: 5px;
+                padding: 5px;
+            }
+            th, td {
+                padding: 10px 6px;
+            }
+            table {
+                font-size: clamp(13px, 3vw, 16px);
+            }
+        }
+
         .emphasis {
             font-weight: bold;
             font-style: italic;
         }
+
         .warning {
             background-color: #fffacd;
             padding: 10px;
             border-left: 4px solid #ff6347;
             margin: 15px 0;
         }
+
         .footer-note {
-            font-size: 12px;
+            font-size: clamp(11px, 2vw, 13px);
             font-style: italic;
             text-align: center;
             margin-top: 30px;
             color: #666;
             border-top: 2px solid #0d2bbf;
-border-bottom: 2px solid #0d2bbf;
-box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset, 0 -2px 3px rgba(0,0,0,0.2) inset;
+            border-bottom: 2px solid #0d2bbf;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset, 0 -2px 3px rgba(0,0,0,0.2) inset;
+            padding: 8px 0;
         }
+
         .img-wrapper {
-    position: relative;
-    width: 100%;
-  }
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
 
-  .img-wrapper img {
-    width: 100%;
-    display: block;
-  }
+        .img-wrapper img {
+            width: 100%;
+            display: block;
+            border-radius: 6px;
+        }
 
-  /* Caption hiển thị chữ chạy */
-  #captionRun {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-
-    /* responsive theo KHUNG ẢNH */
-    font-size: calc(4px + 2.8vw);
-    color: white;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px black;
-    padding: 30px 0;
-    white-space: pre-line;
-    visibility: hidden;
-}
+        /* Caption chạy chữ — giữ nguyên, chỉ tinh chỉnh responsive */
+        #captionRun {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: clamp(16px, 4vw, 28px); /* Tự co giãn theo màn hình */
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px black;
+            padding: 20px 10px;
+            white-space: pre-line;
+            visibility: hidden;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
-    
 <div class="weather-report">
-   <div class="img-wrapper">
-    <img src="img/img.gif" alt="Hình trang">    
-    <!-- Caption chạy từng chữ -->
-    <div id="captionRun"></div>
-</div>
+    <div class="img-wrapper">
+        <img src="img/img.gif" alt="Hình trang">
+        <div id="captionRun"></div>
+    </div>
+
     <div class="section">
         <h2>1. Diễn biến thời tiết trong 24 giờ qua:</h2>
         <p>Hiện nay (24/11), bộ phận không khí lạnh đã báo vẫn đang di chuyển xuống phía Nam.</p>
@@ -103,7 +152,6 @@ box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset, 0 -2px 3px rgba(0,0,0,0.2) inset;
 
     <div class="section">
         <h2>2. Dự báo diễn biến không khí lạnh trong 24 giờ đến 48 giờ tới:</h2>
-
         <h3><span class="emphasis">Trên đất liền:</span></h3>
         <p>Khoảng chiều và đêm 24/11, không khí lạnh sẽ ảnh hưởng đến khu vực Đông Bắc Bộ và Bắc Trung Bộ, sau đó ảnh hưởng đến khu vực Tây Bắc Bộ và Trung Trung Bộ. Trên đất liền, gió Đông Bắc mạnh cấp 3-4, vùng ven biển mạnh cấp 4-5.</p>
         <p>Ở khu vực Bắc Bộ và Bắc Trung Bộ phổ biến không mưa, từ ngày 25/11 trời rét, vùng núi cao của Bắc Bộ có nơi rét đậm. Nhiệt độ thấp nhất trong đợt không khí lạnh này ở khu vực Bắc Bộ và Bắc Trung Bộ phổ biến từ 12-15 độ, vùng núi cao có nơi dưới 10 độ.</p>
@@ -115,29 +163,31 @@ box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset, 0 -2px 3px rgba(0,0,0,0.2) inset;
         <p>Từ chiều 24/11, ở vịnh Bắc Bộ gió Đông Bắc mạnh dần lên cấp 6, giật cấp 7-8, biển động, sóng biển cao 2,0-4,0m; khu vực Bắc Biển Đông gió Đông Bắc mạnh dần lên cấp 7, giật cấp 8-9, biển động mạnh, sóng biển cao 4,0-6,0m; từ chiều tối 24/11, khu vực từ Nam Quang Trị đến Cà Mau, khu vực Giữa Biển Đông gió Đông Bắc mạnh dần lên cấp 6, có lúc cấp 7, giật cấp 8-9, biển động mạnh, sóng biển cao từ 3,0-5,0m.</p>
 
         <h3>Dự báo chi tiết:</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Thời điểm dự báo</th>
-                    <th>Khu vực ảnh hưởng</th>
-                    <th>Nhiệt độ thấp nhất (°C)</th>
-                    <th>Nhiệt độ trung bình (°C)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="2">Đêm 24 và ngày 25/11</td>
-                    <td>Bắc Bộ</td>
-                    <td>14-17, riêng vùng núi 11-14, vùng núi cao có nơi dưới 10</td>
-                    <td>17-19, riêng vùng núi 14-16, vùng núi cao có nơi dưới 13</td>
-                </tr>
-                <tr>
-                    <td>Bắc Trung Bộ</td>
-                    <td>15-18</td>
-                    <td>18-20</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="responsive-table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thời điểm dự báo</th>
+                        <th>Khu vực ảnh hưởng</th>
+                        <th>Nhiệt độ thấp nhất (°C)</th>
+                        <th>Nhiệt độ trung bình (°C)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Đêm 24 và ngày 25/11</td>
+                        <td>Bắc Bộ</td>
+                        <td>14-17, riêng vùng núi 11-14, vùng núi cao có nơi dưới 10</td>
+                        <td>17-19, riêng vùng núi 14-16, vùng núi cao có nơi dưới 13</td>
+                    </tr>
+                    <tr>
+                        <td>Bắc Trung Bộ</td>
+                        <td>15-18</td>
+                        <td>18-20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="section">
@@ -155,41 +205,43 @@ box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset, 0 -2px 3px rgba(0,0,0,0.2) inset;
     <div class="footer-note">
         * Thông tin cập nhật vào lúc 03g30, ngày 24/11/2025.
     </div>
+
     <script>
-window.onload = function () {
-    const el = document.getElementById("captionRun");
-    const lines = [
-        "TIN KHÔNG KHÍ LẠNH TĂNG CƯỜNG"
-    ];
-    function startTyping() {
-        let lineIndex = 0;
-        let charIndex = 0;
-        el.innerHTML = "";
-        el.style.visibility = "visible";
-        function type() {
-            if (lineIndex < lines.length) {
-                if (charIndex < lines[lineIndex].length) {
-                    el.innerHTML += lines[lineIndex][charIndex];
-                    charIndex++;
-                    setTimeout(type, 35);  // tốc độ chữ
-                } else {
-                    el.innerHTML += "<br>";
-                    lineIndex++;
-                    charIndex = 0;
-                    setTimeout(type, 150);
+        window.onload = function () {
+            const el = document.getElementById("captionRun");
+            const lines = [
+                "TIN KHÔNG KHÍ LẠNH TĂNG CƯỜNG"
+            ];
+
+            function startTyping() {
+                let lineIndex = 0;
+                let charIndex = 0;
+                el.innerHTML = "";
+                el.style.visibility = "visible";
+
+                function type() {
+                    if (lineIndex < lines.length) {
+                        if (charIndex < lines[lineIndex].length) {
+                            el.innerHTML += lines[lineIndex][charIndex];
+                            charIndex++;
+                            setTimeout(type, 35);
+                        } else {
+                            el.innerHTML += "<br>";
+                            lineIndex++;
+                            charIndex = 0;
+                            setTimeout(type, 150);
+                        }
+                    } else {
+                        setTimeout(() => {
+                            el.innerHTML = "";
+                            startTyping();
+                        }, 2000);
+                    }
                 }
-            } else {
-                // Khi chạy xong → đợi 2 giây → chạy lại
-                setTimeout(() => {
-                    el.innerHTML = "";
-                    startTyping();
-                }, 2000);
+                type();
             }
-        }
-        type();
-    }
-    startTyping();
-};
-</script>
+            startTyping();
+        };
+    </script>
 </body>
 </html>
