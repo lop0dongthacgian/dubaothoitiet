@@ -4,20 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dự báo thời tiết - Áp thấp nhiệt đới gần Biển Đông</title>
+    
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 10px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    color: #333;
+}
+#typing-title {
+        min-height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+#typing-title {
+    min-height: 70px; /* Giữ khung không giãn trang */
+    border: 0.5px solid #0033FF; /* Viền mỏng */
+    border-radius: 6px;
+    /* 3D nhẹ */
+    box-shadow: inset 1px 1px 2px #ffffff,
+                inset -1px -1px 2px #b5b5b5;
+    padding: 10px;
+    text-align: center;
+}
         h1 {
             text-align: center;
             font-size: 22px;
             margin-bottom: 20px;
-            color: #2c3e50;
+            color: #0033FF;
+            text-shadow: 
+        1px 1px 0 #ffffff,       
+        1px 1px 3px rgba(0,0,0,0.9); 
+            
         }
         h2 {
             font-size: 18px;
@@ -72,7 +93,11 @@
 </head>
 <body>
 
-    <h1>TIN ÁP THẤP NHIỆT ĐỚI <br> GẦN BIỂN ĐÔNG</h1>
+    <h1 id="typing-title"></h1>
+    
+    <!-- Caption chạy từng chữ -->
+    <div id="captionRun"></div>
+</div>
 <img src="img/img.jpg" alt="Hình trang" style="width:100%; height:auto; display:block; margin:0; padding:0;">
     <h2>1. Hiện trạng áp thấp nhiệt đới</h2>
     <p><strong>Hồi 13 giờ ngày 24/11</strong>, vị trí tâm áp thấp nhiệt đới ở vào khoảng 9,6 độ Vĩ Bắc; 126,5 độ Kinh Đông, trên vùng ven biển phía Đông khu vực Trung Phi-líp-pin. Sức gió mạnh nhất vùng gần tâm áp thấp nhiệt đới mạnh cấp 7 (50-61km/giờ), giật cấp 9. Di chuyển theo hướng Tây Tây Bắc với tốc độ khoảng 20km/h.</p>
@@ -124,8 +149,49 @@
         <strong>Tàu thuyền hoạt động</strong> trong các vùng nguy hiểm nói trên đều có khả năng chịu tác động của dông, lốc, gió mạnh, sóng lớn.
     </div>
 
-    <p class="note">Thông tin cập nhật lúc 14h00 ngày 24/11/2025</p>
+    <p class="note">Thông tin cập nhật lúc 13h ngày 24/11/2025</p>
+      
+      <script>
+        // Dùng <br> để xuống dòng trong HTML
+        const fullTitle = "TIN ÁP THẤP NHIỆT ĐỚI<br>GẦN BIỂN ĐÔNG";
+        const displayTitle = "TIN ÁP THẤP NHIỆT ĐỚI\nGẦN BIỂN ĐÔNG"; // Dùng để đếm ký tự (tạm coi \n = 1 ký tự)
+        const titleElement = document.getElementById("typing-title");
+        let i = 0;
+        let isDeleting = false;
+
+        function type() {
+            if (!isDeleting) {
+                // Lấy phần text chưa format
+                let currentText = displayTitle.substring(0, i);
+                // Chuyển \n thành <br> để hiển thị đúng
+                let htmlText = currentText.replace(/\n/g, '<br>');
+                titleElement.innerHTML = htmlText;
+
+                i++;
+                if (i > displayTitle.length) {
+                    setTimeout(() => {
+                        isDeleting = true;
+                        type();
+                    }, 2000);
+                    return;
+                }
+            } else {
+                let currentText = displayTitle.substring(0, i);
+                let htmlText = currentText.replace(/\n/g, '<br>');
+                titleElement.innerHTML = htmlText;
+
+                i--;
+                if (i < 0) {
+                    i = 0;
+                    isDeleting = false;
+                }
+            }
+
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(type, speed);
+        }
+
+        type();
+    </script>
 </body>
 </html>
-
-
