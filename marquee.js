@@ -1,15 +1,3 @@
-<!--   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<!--  Tạo tệp "marquee.js" và dán các đoạn sau vào index -->
-<!--  Vị trí chữ chạy trên (màu vàng) -->
-<!--  <div id="marquee-top"></div>   -->
-
-<!--   Vị trí chữ chạy dưới (màu đỏ) -->
-<!--   <div id="marquee-bottom"></div>   -->
-
-<!--   Import file cấu hình chữ chạy (dán cuối tệp trước </body> -->
-<!--   <script src="marquee.js"></script>     -->
-<!--  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   -->
-
 const marqueeConfig = {
     // Chữ chạy phía trên (màu vàng)
     topMarquee: {
@@ -18,8 +6,7 @@ const marqueeConfig = {
         fontSize: "25px",
         speed: 15,
         enabled: true  // Bật: true /tắt: false chữ chạy này
-    },
-    
+    },  
     // Chữ chạy phía dưới (màu đỏ)
     bottomMarquee: {
         text: "Hãy cùng nhau chủ động phòng chống bão, lũ... giữ an toàn cho gia đình và cộng đồng!",
@@ -29,10 +16,7 @@ const marqueeConfig = {
         enabled: true  // Bật: true /tắt: false chữ chạy này
     }
 };
-
-// ===============================================
 // KHỞI TẠO CHỮ CHẠY
-// ===============================================
 function initMarquee() {
     // Tạo chữ chạy trên nếu có phần tử với id="marquee-top"
     if (marqueeConfig.topMarquee.enabled) {
@@ -45,8 +29,7 @@ function initMarquee() {
             `;
             topContainer.innerHTML = topMarqueeHTML;
         }
-    }
-    
+    } 
     // Tạo chữ chạy dưới nếu có phần tử với id="marquee-bottom"
     if (marqueeConfig.bottomMarquee.enabled) {
         const bottomContainer = document.getElementById('marquee-bottom');
@@ -59,14 +42,10 @@ function initMarquee() {
             bottomContainer.innerHTML = bottomMarqueeHTML;
         }
     }
-    
     // Áp dụng CSS động
     applyMarqueeStyles();
 }
-
-// ===============================================
 // ÁP DỤNG CSS CHO CHỮ CHẠY
-// ===============================================
 function applyMarqueeStyles() {
     const style = document.createElement('style');
     style.textContent = `
@@ -80,8 +59,7 @@ function applyMarqueeStyles() {
             border-top: 1px solid red;
             border-bottom: 1px solid red;
             padding: 0px 0;
-        }
-        
+        }     
         /* Chữ chạy phía trên (màu vàng) */
         .marquee-text1 {
             color: ${marqueeConfig.topMarquee.color};
@@ -89,8 +67,7 @@ function applyMarqueeStyles() {
             font-size: ${marqueeConfig.topMarquee.fontSize};
             text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
             margin: 5px 0 8px 0;
-        }
-        
+        }  
         /* Responsive cho điện thoại */
         @media (max-width: 768px) {
             .marquee-text {
@@ -106,11 +83,9 @@ function applyMarqueeStyles() {
     `;
     document.head.appendChild(style);
 }
-
 // Khởi chạy khi trang đã load xong
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initMarquee);
 } else {
     initMarquee();
 }
-
