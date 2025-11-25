@@ -438,6 +438,32 @@ body {
         padding: 18px;
     }
 }
+/* ==== CSS mới cho chữ chạy (tự tối ưu mọi màn hình) ==== */
+
+/* Dòng chạy phía trên */
+#marqueeTop {
+    display: block;
+    color: #FFFF00;
+    font-weight: bold;
+    font-size: clamp(16px, 3.5vw, 26px);  /* tự co giãn */
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+    margin: 5px 0 8px 0;
+    white-space: nowrap;
+}
+
+/* Dòng chạy phía dưới */
+#marqueeBottom {
+    display: block;
+    color: #FF0000;
+    font-weight: bold;
+    font-size: clamp(18px, 4.5vw, 35px); /* tự co giãn như cũ */
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+    margin: 5px 0 8px 0;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    padding: 2px 0;
+    white-space: nowrap;
+}
 </style>
 </head>
 <body>
