@@ -6,7 +6,7 @@
 const marqueeConfig = {
     // Chữ chạy phía trên (màu vàng)
     topMarquee: {
-        text: "Khoảng chiều và đêm 24/11/2025, không khí lạnh sẽ ảnh hưởng đến khu vực Đông Bắc Bộ và Bắc Trung Bộ; sau đó ảnh hưởng đến khu vực Tây Bắc Bộ và Trung Trung Bộ",
+        text: "Dự báo ngày và đêm 25/11/2025: Khu vực Tp. Huế, Tp. Đà Nẵng và phía Đông tỉnh Quảng Ngãi có mưa, mưa rào, cục bộ có nơi mưa to và dông với lượng mưa từ 15-30mm, cục bộ có nơi trên 70mm",
         color: "#FFFF00",
         fontSize: "25px",
         speed: 15
