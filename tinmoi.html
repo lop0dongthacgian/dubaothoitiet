@@ -3,179 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Báo Thời Tiết - Áp Thấp Nhiệt Đới Gần Biển Đông</title>
+    <title>Dự báo thời tiết - Áp thấp nhiệt đới gần Biển Đông</title>
+    
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 10px;
-            padding: 10px;
-            background-color: white;
-            color: #333;
-        }
-        
-        #typing-title {
-            min-height: 80px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border: 0.5px solid #0033FF;
-            border-radius: 6px;
-            box-shadow: inset 1px 1px 2px #ffffff,
-                        inset -1px -1px 2px #b5b5b5;
-            padding: 10px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    color: #333;
+}
+#typing-title {
+        min-height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+#typing-title {
+    min-height: 70px; /* Giữ khung không giãn trang */
+    border: 0.5px solid #0033FF; /* Viền mỏng */
+    border-radius: 6px;
+    /* 3D nhẹ */
+    box-shadow: inset 1px 1px 2px #ffffff,
+                inset -1px -1px 2px #b5b5b5;
+    padding: 10px;
+    text-align: center;
+}
+        h1 {
             text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        #typing-title h1 {
-            text-align: center;
-            font-size: clamp(18px, 4vw, 24px);
-            margin: 0;
+            font-size: 22px;
+            margin-bottom: 20px;
             color: #0033FF;
-            text-shadow: 1px 1px 0 #ffffff, 1px 1px 3px rgba(0,0,0,0.9);
-            line-height: 1.3;
-            width: 100%;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+            text-shadow: 
+        1px 1px 0 #ffffff,       
+        1px 1px 3px rgba(0,0,0,0.9); 
+            
         }
-        
         h2 {
-            color: #2980b9;
-            margin-top: 30px;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #27ae60;
+            
         }
-        
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 15px 0;
+            background-color: white; /* Nội dung bảng vẫn có nền trắng để dễ đọc */
         }
-        
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        
         th {
-            background-color: #f2f2f2;
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #dee2e6;
             font-weight: bold;
         }
-        
-        tr:nth-child(even) {
-            background-color: #fafafa;
+        td {
+            padding: 10px;
+            border: 1px solid #dee2e6;
         }
-        
-        .section {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .image-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        .caption {
-            text-align: center;
-            font-style: italic;
-            margin-top: 5px;
-            font-size: 0.9em;
-            color: #555;
-        }
-        
         .warning {
-            background-color: #fffacd;
-            border-left: 4px solid #ffeb3b;
-            padding: 15px;
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
             margin: 15px 0;
-            border-radius: 4px;
+        }
+        .strong-wind {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .note {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+                margin: 10px;
+            }
+            table {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="typing-title">
-        <h1>TIN ÁP THẤP NHIỆT ĐỚI<br>GẦN BIỂN ĐÔNG</h1>
-    </div>
+
+    <h1 id="typing-title"></h1>
     
-    <div class="section image-container">
-        <img src="img/img.jpg" alt="Bản đồ dự báo quỹ đạo và cường độ áp thấp nhiệt đới">
-        <div class="caption">Bản đồ dự báo quỹ đạo và cường độ áp thấp nhiệt đới phát lúc 08h00 ngày 25/11/2025</div>
-    </div>
-    
-    <div class="section">
-        <h2>1. Hiện trạng áp thấp nhiệt đới</h2>
-        <p>Hồi 07 giờ ngày 25/11, vị trí tâm áp thấp nhiệt đới ở vào khoảng 10,3 độ Vĩ Bắc; 123,1 độ Kinh Đông, trên khu vực miền Trung Phi-líp-pin. Sức gió mạnh nhất vùng gần tâm áp thấp nhiệt đới mạnh cấp 7 (50-61km/giờ), giật cấp 9. Di chuyển theo hướng Tây Tây Bắc với tốc độ 20-25km/h.</p>
-    </div>
+<img src="img/img.jpg" alt="Hình trang" style="width:100%; height:auto; display:block; margin:0; padding:0;">
+    <h2>1. Hiện trạng áp thấp nhiệt đới</h2>
+    <p><strong>Hồi 13 giờ ngày 25/11</strong>, vị trí tâm áp thấp nhiệt đới ở vào khoảng 9,9 độ Vĩ Bắc; 
+vị trí tâm áp thấp nhiệt đới ở vào khoảng 10,4 độ Vĩ Bắc; 121,3 độ Kinh Đông, trên vùng biển phía Tây của miền Trung Phi-líp-pin. Sức gió mạnh nhất vùng gần tâm áp thấp nhiệt đới mạnh cấp 7 (50-61km/giờ), giật cấp 9. Di chuyển theo hướng Tây Tây Bắc với tốc độ khoảng 30km/h.</p>
 
-    <div class="section">
-        <h2>2. Dự báo diễn biến áp thấp nhiệt đới/bão (trong 24 đến 48 giờ tới)</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Thời điểm dự báo</th>
-                    <th>Hướng, tốc độ</th>
-                    <th>Vị trí</th>
-                    <th>Cường độ</th>
-                    <th>Vùng nguy hiểm</th>
-                    <th>Cấp độ rủi ro thiên tai (Khu vực chịu ảnh hưởng)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>07 giờ ngày 26/11</td>
-                    <td>Tây Tây Bắc, khoảng 20-25 km/h, đi vào Biển Đông</td>
-                    <td>11,9N-118,2E; trên vùng biển phía Đông khu vực Giữa Biển Đông</td>
-                    <td>Có khả năng mạnh lên thành bão. Cấp 8, giật cấp 10</td>
-                    <td>Vĩ tuyến 9,5<sup>0</sup>N-13,5<sup>0</sup>N; phía Đông kinh tuyến 116,5<sup>0</sup>E</td>
-                    <td><strong>Cấp 3:</strong> vùng biển phía Đông khu vực Giữa Biển Đông và vùng biển phía Đông Bắc khu vực Nam Biển Đông (bao gồm vùng biển phía Đông Bắc đặc khu Trường Sa)</td>
-                </tr>
-                <tr>
-                    <td>07 giờ ngày 27/11</td>
-                    <td>Tây Tây Bắc, khoảng 15km/h</td>
-                    <td>12,6N-115,0E; trên khu vực Giữa Biển Đông</td>
-                    <td>Có khả năng mạnh thêm. Cấp 9-10, giật cấp 12</td>
-                    <td>Vĩ tuyến 9,5<sup>0</sup>N-15,0<sup>0</sup>N; phía Đông kinh tuyến 113,0<sup>0</sup>E</td>
-                    <td><strong>Cấp 3:</strong> khu vực Giữa Biển Đông và vùng biển phía Bắc khu vực Nam Biển Đông (bao gồm vùng biển phía Bắc đặc khu Trường Sa)</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="section">
-        <h2>3. Cảnh báo diễn biến bão (từ 48 đến 72 giờ tới)</h2>
-        <p>Từ 48 đến 72 giờ tiếp theo, bão di chuyển chủ yếu theo hướng Tây, mỗi giờ đi được 10-15km và tiếp tục có khả năng mạnh thêm.</p>
-    </div>
-
-    <div class="section">
-        <h2>4. Dự báo tác động của áp thấp nhiệt đới/bão</h2>
-        <table>
+    <h2>2. Dự báo diễn biến áp thấp nhiệt đới/bão (trong 24 đến 48 giờ tới)</h2>
+    <table>
+        <thead>
             <tr>
-                <td colspan="2"><strong>Gió mạnh, sóng lớn</strong></td>
+                <th>Thời điểm dự báo</th>
+                <th>Hướng, tốc độ</th>
+                <th>Vị trí</th>
+                <th>Cường độ</th>
+                <th>Vùng nguy hiểm</th>
+                <th>Cấp độ rủi ro thiên tai (Khu vực chịu ảnh hưởng)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>13 giờ ngày 26/11</td>
+                <td>Tây Tây Bắc, 20-25 km/h, đi vào Biển Đông</td>
+                <td>12,2N-116,8E; trên vùng biển phía Đông khu vực Giữa Biển Đông</td>
+                <td>Có khả năng mạnh lên thành bão. Cấp 9, giật cấp 11</td>
+                <td>10,00N-14,00N; phía Đông kinh tuyến 115,50E</td>
+                <td>Cấp 3: vùng biển phía Đông khu vực Giữa Biển Đông (bao gồm vùng biển phía Đông Bắc đặc khu Trường Sa)</td>
             </tr>
             <tr>
-                <td colspan="2">
-                   <b>Trên biển: </b> Từ chiều tối ngày 25/11, vùng biển phía Đông khu vực Giữa Biển Đông và vùng biển phía Đông Bắc khu vực Nam Biển Đông có gió mạnh dần lên cấp 6-7; vùng gần tâm bão mạnh cấp 8-9, giật cấp 11, sóng biển cao 3,0-5,0m. Biển động rất mạnh.<br><br>
-                    <strong>Cảnh báo:</strong> Trong khoảng chiều ngày 26-28/11, khu vực Giữa Biển Đông và vùng biển phía Bắc khu vực Nam Biển Đông (bao gồm vùng biển phía Bắc đặc khu Trường Sa) có khả năng chịu tác động của gió mạnh cấp 10-11, giật cấp 14.<br><br>
-                    Tàu thuyền hoạt động trong các vùng nguy hiểm nói trên đều có khả năng chịu tác động của đông, lốc, gió mạnh, sóng lớn.
-                </td>
+                <td>13 giờ ngày 27/11</td>
+                <td>Tây Tây Bắc, 10-15km/h</td>
+                <td>12,6N-114,0E; trên khu vực Giữa Biển Đông</td>
+                <td>Có khả năng mạnh thêm. Cấp 10, giật cấp 12</td>
+                <td>10,50N-15,00N; phía Đông kinh tuyến 112,50E</td>
+                <td><strong>Cấp 3: khu vực Giữa Biển Đông (bao gồm vùng biển phía Bắc đặc khu Trường Sa)</td>
             </tr>
-        </table>
-    </div>
+        </tbody>
+    </table>
 
-    <div class="caption">Tin phát lúc 08h00 ngày 25/11/2025</div>
+    <h2>3. Cảnh báo diễn biến bão (từ 48 đến 72 giờ tới)</h2>
+    <p>Từ 48 đến 72 giờ tiếp theo, bão di chuyển chậm theo hướng Tây, mỗi giờ đi được 5-10km và tiếp tục có khả năng mạnh thêm.</p>
+
+    <h2>4. Dự báo tác động của áp thấp nhiệt đới/bão</h2>
+    <div class="warning">
+        <strong>Gió mạnh, sóng lớn</strong>
+        <br><br>
+        <strong>Trên biển:</strong><br>
+        Từ chiều tối ngày 25/11, vùng biển phía Đông khu vực Giữa Biển Đông có gió mạnh dần lên cấp 6-7; vùng gần tâm bão đi qua mạnh cấp 8-9, giật cấp 11, sóng biển cao 4,0-6,0m, biển động rất mạnh.
+
+        <br><b>Cảnh báo: </b>Trong khoảng chiều ngày 26-28/11, khu vực Giữa Biển Đông (bao gồm vùng biển phía Bắc đặc khu Trường Sa) có khả năng chịu tác động của gió mạnh cấp 10-11, giật cấp 14, sóng biển cao 7,0-9,0m, biển động dữ dội.
+          Tàu thuyền hoạt động trong các vùng nguy hiểm nói trên đều có khả năng chịu tác động của dông, lốc, gió mạnh, sóng lớn.
+                 <br><br>
+      <p>Thông tin cập nhật lúc 14h15 ngày 25/11/2025 </p>
+ 
+     <script>    	
+        // Dùng <br> để xuống dòng trong HTML
+        const fullTitle = "TIN ÁP THẤP NHIỆT ĐỚI<br>GẦN BIỂN ĐÔNG";
+        const displayTitle = "TIN ÁP THẤP NHIỆT ĐỚI\nGẦN BIỂN ĐÔNG"; // Dùng để đếm ký tự (tạm coi \n = 1 ký tự)
+        const titleElement = document.getElementById("typing-title");
+        let i = 0;
+        let isDeleting = false;
+
+        function type() {
+            if (!isDeleting) {
+                // Lấy phần text chưa format
+                let currentText = displayTitle.substring(0, i);
+                // Chuyển \n thành <br> để hiển thị đúng
+                let htmlText = currentText.replace(/\n/g, '<br>');
+                titleElement.innerHTML = htmlText;
+
+                i++;
+                if (i > displayTitle.length) {
+                    setTimeout(() => {
+                        isDeleting = true;
+                        type();
+                    }, 2000);
+                    return;
+                }
+            } else {
+                let currentText = displayTitle.substring(0, i);
+                let htmlText = currentText.replace(/\n/g, '<br>');
+                titleElement.innerHTML = htmlText;
+
+                i--;
+                if (i < 0) {
+                    i = 0;
+                    isDeleting = false;
+                }
+            }
+
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(type, speed);
+        }
+
+        type();
+    </script>
 </body>
 </html>
