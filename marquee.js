@@ -22,7 +22,7 @@ const marqueeConfig = {
     
     // Chữ chạy phía dưới (màu đỏ)
     bottomMarquee: {
-        text: "Hãy cùng nhau chủ động phòng chống bão, lũ giữ an toàn cho gia đình và cộng đồng!",
+        text: "Hãy cùng nhau chủ động phòng chống bão, lũ... giữ an toàn cho gia đình và cộng đồng!",
         color: "#FF0000",
         fontSize: "35px",
         speed: 15,
@@ -113,3 +113,4 @@ if (document.readyState === 'loading') {
 } else {
     initMarquee();
 }
+
