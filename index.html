@@ -70,7 +70,6 @@ body {
     text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
-
 .content {
     padding: 40px 30px;
 }
@@ -417,12 +416,6 @@ body {
     .btn {
         max-width: 100%;
     }
-
-    .marquee-text {
-        font-size: 26px;
-        margin: 3px 0 6px 0;
-        padding: 2px 0;
-    }
     
     .weather-modal-content {
         padding: 20px;
@@ -438,32 +431,6 @@ body {
         padding: 18px;
     }
 }
-/* ==== CSS mới cho chữ chạy (tự tối ưu mọi màn hình) ==== */
-
-/* Dòng chạy phía trên */
-#marqueeTop {
-    display: block;
-    color: #FFFF00;
-    font-weight: bold;
-    font-size: clamp(16px, 3.5vw, 26px);  /* tự co giãn */
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
-    margin: 5px 0 8px 0;
-    white-space: nowrap;
-}
-
-/* Dòng chạy phía dưới */
-#marqueeBottom {
-    display: block;
-    color: #FF0000;
-    font-weight: bold;
-    font-size: clamp(18px, 4.5vw, 35px); /* tự co giãn như cũ */
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
-    margin: 5px 0 8px 0;
-    border-top: 1px solid red;
-    border-bottom: 1px solid red;
-    padding: 2px 0;
-    white-space: nowrap;
-}
 </style>
 </head>
 <body>
@@ -472,7 +439,7 @@ body {
         <p>Khu dân cư Trung Bình A3 <br> Phường Thanh Khê, Thành phố Đà Nẵng</p>
     </div>
 
-    <marquee id="marqueeTop"></marquee>
+    <!-- Chữ chạy trên sẽ được thêm tự động bởi marquee.js -->
 
     <object data="tinmoi.html" width="100%" height="800px"></object>
 
@@ -564,7 +531,7 @@ body {
             </div>
         </div>
 
-        <marquee id="marqueeBottom"></marquee>
+        <!-- Chữ chạy dưới sẽ được thêm tự động bởi marquee.js -->
 
         <div class="footer">
             <p>Tổ công nghệ số cộng đồng Trung Bình A3</p>
@@ -607,6 +574,9 @@ body {
             </div>
         </div>
     </div>
+
+    <!-- Import file cấu hình chữ chạy -->
+    <script src="marquee.js"></script>
 
     <script>
         // Danh sách các trang thời tiết
@@ -673,6 +643,5 @@ body {
             }
         }
     </script>
-    <script src="marquee.js"></script>
 </body>
 </html>
