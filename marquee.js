@@ -1,7 +1,14 @@
-// ===============================================
-// CẤU HÌNH CHỮ CHẠY (MARQUEE)
-// ===============================================
-// Bạn có thể dễ dàng cập nhật nội dung chữ chạy tại đây
+<!--   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!--  Tạo tệp "marquee.js" và dán các đoạn sau vào index -->
+<!--  Vị trí chữ chạy trên (màu vàng) -->
+<!--  <div id="marquee-top"></div>   -->
+
+<!--   Vị trí chữ chạy dưới (màu đỏ) -->
+<!--   <div id="marquee-bottom"></div>   -->
+
+<!--   Import file cấu hình chữ chạy (dán cuối tệp trước </body> -->
+<!--   <script src="marquee.js"></script>     -->
+<!--  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   -->
 
 const marqueeConfig = {
     // Chữ chạy phía trên (màu vàng)
@@ -9,15 +16,17 @@ const marqueeConfig = {
         text: "Dự báo ngày và đêm 25/11/2025: Khu vực Tp. Huế, Tp. Đà Nẵng và phía Đông tỉnh Quảng Ngãi có mưa, mưa rào, cục bộ có nơi mưa to và dông với lượng mưa từ 15-30mm, cục bộ có nơi trên 70mm",
         color: "#FFFF00",
         fontSize: "25px",
-        speed: 15
+        speed: 15,
+        enabled: true  // Bật: true /tắt: false chữ chạy này
     },
     
     // Chữ chạy phía dưới (màu đỏ)
     bottomMarquee: {
-        text: "Hãy cùng nhau chủ động phòng chống bão, lũ... giữ an toàn cho gia đình và cộng đồng!",
+        text: "Hãy cùng nhau chủ động phòng chống bão, lũ giữ an toàn cho gia đình và cộng đồng!",
         color: "#FF0000",
         fontSize: "35px",
-        speed: 15
+        speed: 15,
+        enabled: true  // Bật: true /tắt: false chữ chạy này
     }
 };
 
@@ -25,30 +34,30 @@ const marqueeConfig = {
 // KHỞI TẠO CHỮ CHẠY
 // ===============================================
 function initMarquee() {
-    // Tạo chữ chạy trên
-    const topMarqueeHTML = `
-        <marquee class="marquee-text1" behavior="scroll" direction="left" scrollamount="${marqueeConfig.topMarquee.speed}">
-            ${marqueeConfig.topMarquee.text}
-        </marquee>
-    `;
-    
-    // Tạo chữ chạy dưới
-    const bottomMarqueeHTML = `
-        <marquee class="marquee-text" behavior="scroll" direction="left" scrollamount="${marqueeConfig.bottomMarquee.speed}">
-            ${marqueeConfig.bottomMarquee.text}
-        </marquee>
-    `;
-    
-    // Chèn chữ chạy trên vào sau header
-    const header = document.querySelector('.header');
-    if (header) {
-        header.insertAdjacentHTML('afterend', topMarqueeHTML);
+    // Tạo chữ chạy trên nếu có phần tử với id="marquee-top"
+    if (marqueeConfig.topMarquee.enabled) {
+        const topContainer = document.getElementById('marquee-top');
+        if (topContainer) {
+            const topMarqueeHTML = `
+                <marquee class="marquee-text1" behavior="scroll" direction="left" scrollamount="${marqueeConfig.topMarquee.speed}">
+                    ${marqueeConfig.topMarquee.text}
+                </marquee>
+            `;
+            topContainer.innerHTML = topMarqueeHTML;
+        }
     }
     
-    // Chèn chữ chạy dưới vào trước footer
-    const footer = document.querySelector('.footer');
-    if (footer) {
-        footer.insertAdjacentHTML('beforebegin', bottomMarqueeHTML);
+    // Tạo chữ chạy dưới nếu có phần tử với id="marquee-bottom"
+    if (marqueeConfig.bottomMarquee.enabled) {
+        const bottomContainer = document.getElementById('marquee-bottom');
+        if (bottomContainer) {
+            const bottomMarqueeHTML = `
+                <marquee class="marquee-text" behavior="scroll" direction="left" scrollamount="${marqueeConfig.bottomMarquee.speed}">
+                    ${marqueeConfig.bottomMarquee.text}
+                </marquee>
+            `;
+            bottomContainer.innerHTML = bottomMarqueeHTML;
+        }
     }
     
     // Áp dụng CSS động
@@ -104,4 +113,3 @@ if (document.readyState === 'loading') {
 } else {
     initMarquee();
 }
-
