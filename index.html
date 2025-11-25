@@ -70,25 +70,6 @@ body {
     text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
-/* 🌟 Dòng chữ chạy áp dụng cho mọi thiết bị */
-.marquee-text {
-    color: #FF0000;
-    font-weight: bold;
-    font-size: 35px;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
-    margin: 5px 0 8px 0;
-    border-top: 1px solid red;
-    border-bottom: 1px solid red;
-    padding: 0px 0;
-}
-    
-.marquee-text1 {
-    color: #FFFF00;
-    font-weight: bold;
-    font-size: 25px;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
-    margin: 5px 0 8px 0;
-}
 
 .content {
     padding: 40px 30px;
@@ -465,9 +446,7 @@ body {
         <p>Khu dân cư Trung Bình A3 <br> Phường Thanh Khê, Thành phố Đà Nẵng</p>
     </div>
 
-    <marquee class="marquee-text1" behavior="scroll" direction="left" scrollamount="15">
-        Ngày 24/11/2025 Ban Chỉ đạo Phòng thủ dân sự quốc gia vừa ban hành công điện số 33/CĐ-BCĐ-BNNΜΤ về việc chủ động ứng phó với áp thấp nhiệt đới gần Biển Đông (xem nội dung phía dưới)
-    </marquee>
+    <marquee id="marqueeTop"></marquee>
 
     <object data="tinmoi.html" width="100%" height="800px"></object>
 
@@ -559,15 +538,13 @@ body {
             </div>
         </div>
 
-        <marquee class="marquee-text" behavior="scroll" direction="left" scrollamount="15">
-            Hãy cùng nhau chủ động phòng chống bão, lũ giữ an toàn cho gia đình và cộng đồng!
-        </marquee>
+        <marquee id="marqueeBottom"></marquee>
 
         <div class="footer">
             <p>Tổ công nghệ số cộng đồng Trung Bình A3</p>
             <p>Phường Thanh Khê - Thành phố Đà Nẵng</p>
             <div style="text-align:center; margin:10px 0;">
-                <img src="https://api.visitorbadge.io/api/visitors?path=thong_bao_thoi_tiet&label=Tổng%20lượt%20truy%20cập&countColor=%23007b5e&labelColor=rgba(255,255,255,0)&style=flat-square" 
+                <img src="https://api.visitorbadge.io/api/visitors?path=app_thong_bao_thoi_tiet&label=Tổng%20lượt%20truy%20cập&countColor=%23007b5e&labelColor=rgba(255,255,255,0)&style=flat-square" 
                     alt="Tổng lượt truy cập"
                     style="height:28px; border:1px solid #007b5e; border-radius:6px; padding:3px; background:rgba(255,255,255,0.8);">
             </div>
@@ -670,8 +647,6 @@ body {
             }
         }
     </script>
+    <script src="marquee.js"></script>
 </body>
-
 </html>
-
-
