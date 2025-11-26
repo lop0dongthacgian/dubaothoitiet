@@ -2,13 +2,13 @@ const marqueeConfig = {
     // Chữ chạy phía trên (màu vàng) – hỗ trợ nhiều câu luân phiên
     topMarquee: {
         texts: [
-            "Trong 24 giờ tới, lũ trên sông Srêpôk (Đắk Lắk) tại trạm Bản Đôn tiếp tục xuống và ở dưới mức BĐ2, lũ trên sông Kôn (Gia Lai) sẽ dao động ở trên mức BĐ1",
-            "Ngập lụt vẫn diễn ra tại tỉnh Đắk Lắk. Nguy cơ xảy ra ngập lụt tại vùng trũng thấp ven sông tỉnh Gia Lai. Nguy cơ xảy ra sạt lở đất trên các sườn dốc các tỉnh Gia Lai, Đắk Lắk",
+            "Bộ Nông nghiệp và Môi trường đã đưa ra 3 kịch bản của bão 15. Theo đó, kịch bản 1: Khả năng cao nhất hiện nay bão đổi hướng Bắc khi đến vùng biển Tây Bắc đặc khu Trường Sa (cách bờ biển Gia Lai-Khánh Hòa khoảng 500km về phía Đông (xác suất 70%); kịch bản 2 xấu hơn, bão không đổi hướng mà đi vào khu vực Gia Lai - Khánh Hòa (xác suất 20%); kịch bản 3 (xác suất 10%), bão tan trên biển, không ảnh hưởng đến đất liền nước ta cả về mưa và gió",
+            
             "Công điện số 34/CD-BCĐ-BNNMT ngày 26/11/2025 của Ban Chỉ đạo Phòng thủ dân sự Quốc Gia về việc ứng phó với bão trên Biển Đông (Xem mục Công điện)"
         ],
         color: "#FFFF00",
         fontSize: "35px",
-        speed: 220, // Tốc độ chạy chữ
+        speed: 180, // Tốc độ chạy chữ
         pauseBetween: 2000, // Thời gian dừng giữa các câu (ms)
         enabled: true
     },  
