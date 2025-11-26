@@ -2,9 +2,9 @@ const marqueeConfig = {
     // Chữ chạy phía trên (màu vàng) – hỗ trợ nhiều câu luân phiên
     topMarquee: {
         texts: [
-            "Ở khu vực Bắc Bộ và Bắc Trung Bộ phổ biến không mưa, đêm và sáng trời rét, vùng núi Bắc Bộ có nơi rét đậm.",
-            "Vùng núi cao của Bắc Bộ đề phòng khả năng xảy ra sương muối.",
-            "Nhiệt độ thấp nhất trong đợt không khí lạnh này ở khu vực Bắc Bộ và Bắc Trung Bộ phổ biến từ 12-15 độ, vùng núi Bắc Bộ 10-12 độ, vùng núi cao có nơi dưới 10 độ."
+            "Trong 24 giờ tới, lũ trên sông Srêpôk (Đắk Lắk) tại trạm Bản Đôn tiếp tục xuống và ở dưới mức BĐ2, lũ trên sông Kôn (Gia Lai) sẽ dao động ở trên mức BĐ1",
+            "Ngập lụt vẫn diễn ra tại tỉnh Đắk Lắk. Nguy cơ xảy ra ngập lụt tại vùng trũng thấp ven sông tỉnh Gia Lai. Nguy cơ xảy ra sạt lở đất trên các sườn dốc các tỉnh Gia Lai, Đắk Lắk"
+            
         ],
         color: "#FFFF00",
         fontSize: "35px",
