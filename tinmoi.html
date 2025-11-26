@@ -25,7 +25,7 @@
     }
         .title-box h1 {
       text-align: center;  	
-      font-size: 25px;
+      font-size: 27px;
       color: #00D1FF;
       text-shadow: 
         1px 1px 0 #004AB4,
@@ -88,7 +88,7 @@
 <body>
     
     <div class="title-box">
-    <h1 id="typeFadeTitle"></h1>
+    <h1 class="zoom-title">TIN BÃO TRÊN BIỂN ĐÔNG <br> (Cơn bão số 15)</h1>
 </div>
     
 
@@ -150,80 +150,36 @@
       <p class="note">(Thông tin cập nhật lúc 14h00 ngày 26/11/2025) </p>
  
      <style>
-.char {
+.zoom-title {
     opacity: 0;
-    display: inline-block;
-    animation: fadeInChar 0.5s forwards;
+    transform: scale(0.2);
+    animation: startZoom 0.8s ease-out forwards, loopZoom 3s ease-in-out 5s infinite;
 }
 
-/* Hiện từng ký tự */
-@keyframes fadeInChar {
-    to { opacity: 1; }
+/* ⚡ Giai đoạn 1 — Phóng to nhanh khi khởi động */
+@keyframes startZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-/* Tan biến toàn bộ chữ */
-@keyframes fadeOutAll {
-    to { opacity: 0; transform: scale(0.9); }
-}
-
-/* Tạo khoảng cách bằng ký tự ẩn */
-.space {
-    display: inline-block;
-    width: 6px; /* chỉnh rộng khoảng cách từ */
+/* 🔁 Giai đoạn 2 — Phóng to / thu nhỏ lặp lại */
+@keyframes loopZoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 </style>
-
-<script>
-// Nội dung có hỗ trợ xuống dòng \n
-const text = "TIN BÃO TRÊN BIỂN ĐÔNG\n(Cơn bão số 15)";
-const title = document.getElementById("typeFadeTitle");
-
-function playEffect() {
-    title.innerHTML = "";
-
-    let html = "";
-    let visibleCharIndex = 0;
-
-    // Duyệt từng ký tự
-    for (let i = 0; i < text.length; i++) {
-        const ch = text[i];
-
-        if (ch === "\n") {
-            html += "<br>";
-            continue;
-        }
-
-        if (ch === " ") {
-            // chèn ký tự ẩn (zero width space)
-            html += `<span class="space">&#8203;</span>`;
-            continue;
-        }
-
-        // ký tự bình thường
-        html += `<span class="char" style="animation-delay:${visibleCharIndex * 0.07}s">${ch}</span>`;
-        visibleCharIndex++;
-    }
-
-    title.innerHTML = html;
-
-    // Tổng thời gian hoàn tất typing
-    const totalTime = visibleCharIndex * 70 + 500;
-
-    // Tan biến sau khi hiện xong
-    setTimeout(() => {
-        title.style.animation = "fadeOutAll 0.8s forwards";
-    }, totalTime);
-
-    // Reset vòng lặp
-    setTimeout(() => {
-        title.style.animation = "";
-        playEffect();
-    }, totalTime + 1200);
-}
-
-playEffect();
-</script>
-
 </body>
 </html>
-
