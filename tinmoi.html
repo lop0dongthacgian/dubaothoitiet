@@ -14,18 +14,26 @@
     background-color: white;
     color: #333;
 }
-        
-        .title-box {
-    text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    border-image: linear-gradient(to right, #0d2bbf, #66ccff, #0d2bbf) 1;
-    margin-bottom: 10px;   /* 👈 thêm khoảng cách dưới */
+#typing-title {
+        min-height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
+#typing-title {
+    min-height: 90px; /* Giữ khung không giãn trang */
+    border: 0.5px solid #0033FF; /* Viền mỏng */
+    border-radius: 6px;
+    /* 3D nhẹ */
+    box-shadow: inset 1px 1px 4px #ffffff,
+                inset -1px -1px 4px #b5b5b5;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;   /* 👈 thêm khoảng cách dưới */
+}
         .title-box h1 {
       text-align: center;  	
-      font-size: 25px;
+      font-size: 22px;
       color: #00D1FF;
       text-shadow: 
         1px 1px 0 #004AB4,
@@ -88,13 +96,13 @@
 <body>
     
     <div class="title-box">
-    <h1 class="zoom-title">TIN BÃO TRÊN BIỂN ĐÔNG <br> (Cơn bão số 15)</h1>
+    <h1 id="typing-title"></h1>
 </div>
     <img src="img/img.jpeg" alt="Hình trang" style="width:100%; height:auto; display:block; margin:0; padding:0;">
 
     <h2>1. Hiện trạng bão</h2>
     
-     <p><strong>Hồi 13 giờ ngày 26/11,</strong> vị trí tâm bão ở vào khoảng 12,4 độ Vĩ Bắc; 116,6 độ Kinh Đông, cách đảo Song Tử Tây khoảng 280km về phía Đông Đông Bắc. Sức gió mạnh nhất vùng gần tâm bão mạnh cấp 9 (75-88km/giờ), giật cấp 11. Di chuyển theo hướng Tây Tây Bắc với tốc độ khoảng 20km/h.</h2>
+     <p><strong>Hồi 07 giờ ngày 27/11/2025,</strong> Hồi 07 giờ ngày 27/11, vị trí tâm bão ở vào khoảng 13,0 độ Vĩ Bắc; 114,2 độ Kinh Đông, cách đảo Song Tử Tây khoảng 180km về phía Bắc. Sức gió mạnh nhất vùng gần tâm bão mạnh cấp 12 (118-133km/h), giật cấp 15. Di chuyển theo hướng Tây Tây Bắc, tốc độ 10-15km/h.</h2>
         <h2>2. Dự báo diễn biến bão (trong 24 đến 72 giờ tới)</h2>
         <table>
         <thead>
@@ -109,79 +117,84 @@
         </thead>
         <tbody>
             <tr>
-                <td>13 giờ 00 ngày 27/11/2025</td>
-                <td>Tây Tây Bắc, khoảng 10km/h</td>
-                <td>12,7N-114,1E; trên khu vực Giữa Biển Đông, cách đảo Song Tử Tây khoảng 150km về phía Bắc</td>
-                <td>Có khả năng mạnh thêm. Cấp 11, giật cấp 14</td>
-                <td>Vĩ tuyến 11,00N-15,00N; Kinh tuyến 112,00E-118,50E</td>
+                <td>07 giờ 00 ngày 28/11/2025</td>
+                <td>Tây Tây Nam, 5-10km/h</td>
+                <td>12,5N-113,0E; trên vùng biển phía Tây khu vực Giữa Biển Đông, cách đảo Song Tử Tây khoảng 200km về phía Tây Bắc</td>
+                <td>Cấp 12, giật cấp 15</td>
+                <td>Vĩ tuyến 11,00N-15,00N; Kinh tuyến 111,50E-116,00E</td>
                 <td>Cấp 3: khu vực Giữa Biển Đông (bao gồm vùng biển phía Bắc đặc khu Trường Sa)</td>
             </tr>
             <tr>
-                <td>13 giờ 00 ngày 28/11/2025</td>
-                <td>Tây Tây Nam, khoảng 5km/h</td>
-                <td>12,4N-112,9E; trên khu vực Giữa Biển Đông, cách đảo Song Tử Tây khoảng 200km về phía Tây Bắc</td>
+                <td>07 giờ 00 ngày 29/11/2025</td>
+                <td>Tây Tây Bắc, sau đó là Tây Bắc, khoảng 5km/h</td>
+                <td>13,0N-112,3E; trên vùng biển phía Tây khu vực Giữa Biển Đông</td>
                 <td>Cấp 11, giật cấp 14</td>
-                <td>Vĩ tuyến 11,00N-15,00N; Kinh tuyến 111,00E-116,00E</td>
-                <td><strong>Cấp 3: khu vực Giữa Biển Đông (bao gồm vùng biển phía Bắc đặc khu Trường Sa)</td>
+                <td>Vĩ tuyến 11,00N-15,00N; Kinh tuyến 110,50E-115,00E</td>
+                <td><strong>Cấp 3: vùng biển phía Tây khu vực Giữa Biển Đông (bao gồm vùng biển phía Tây Bắc đặc khu Trường Sa)</td>
             </tr>
             <tr>
-                <td>13 giờ 00 ngày 29/11/2025</td>
-                <td>Tây Bắc, khoảng 5km/h</td>
-                <td>13,1N-112,0E; trên vùng biển phía Tây khu vực Giữa Biển Đông</td>
-                <td>Cấp 10-11, giật cấp 14</td>
-                <td>11,00N-15,00N; 110,50E-115,00E</td>
-                <td><strong>Cấp 3: vùng biển phía Tây khu vực Giữa Biển Đông (bao gồm vùng biển phía Tây Bắc đặc khu Trường Sa)</td>
+                <td>07 giờ 00 ngày 30/11/2025</td>
+                <td>Bắc Tây Bắc, 3-5km/h</td>
+                <td>13,9N-112,0E; trên vùng biển phía Tây Bắc khu vực Giữa Biển Đông</td>
+                <td>Cấp 10, giật cấp 13</td>
+                <td>11,50N-15,50N; 110,50E-114,00E</td>
+                <td><strong>Cấp 3: vùng biển phía Tây khu vực Giữa Biển Đông</td>
             </tr>
         </tbody>
     </table>
 
     <h2>3. Cảnh báo diễn biến bão (từ 48 đến 72 giờ tới)</h2>
-    <p>Từ 72 đến 120 giờ tiếp theo, bão di chuyển chậm theo hướng Bắc Tây Bắc, tốc độ 3-5km/h và cường độ suy yếu dần.</p>
+    <p>Từ 72 đến 120 giờ tiếp theo, bão di chuyển chậm theo hướng Bắc Tây Bắc, sau đó có khả năng đổi hướng Tây, tốc độ 3-5km/h và cường độ tiếp tục suy yếu dần.</p>
 
     <h2>4. Dự báo tác động của áp thấp nhiệt đới/bão</h2>
     <div class="warning">
         <strong>Gió mạnh, sóng lớn</strong>
         <br><br>
         <strong>Trên biển:</strong><br>
-        Khu vực Giữa Biển Đông (bao gồm vùng biển phía Bắc đặc khu Trường Sa) có gió mạnh cấp 7-8; vùng gần tâm bão đi qua mạnh cấp 9-11, giật cấp 14; sóng biển cao 4,0-6,0m, vùng gần tâm bão 7,0-9,0m; biển động dữ dội.
+        Khu vực Giữa Biển Đông (bao gồm vùng biển phía Bắc đặc khu Trường Sa) có gió mạnh cấp 7-9; vùng gần tâm bão đi qua mạnh cấp 10-12, giật cấp 15; sóng biển cao 4,0-6,0m, vùng gần tâm bão 7,0-9,0m; biển động dữ dội.
           Tàu thuyền hoạt động trong các vùng nguy hiểm nói trên đều có khả năng chịu tác động của dông, lốc, gió mạnh, sóng lớn.
 
         
-      <p class="note">(Thông tin cập nhật lúc 14h00 ngày 26/11/2025) </p>
+      <p class="note">(Thông tin cập nhật lúc 08h00 ngày 27/11/2025) </p>
  
-     <style>
-.zoom-title {
-    opacity: 0;
-    transform: scale(0.2);
-    animation: startZoom 0.8s ease-out forwards, loopZoom 3s ease-in-out 5s infinite;
-}
+     <script>    	
+        // Dùng <br> để xuống dòng trong HTML
+        const fullTitle = "TIN BÃO TRÊN BIỂN ĐÔNG <br> (Cơn bão số 15)";
+        const displayTitle = "TIN BÃO TRÊN BIỂN ĐÔNG\n(Cơn bão số 15)"; // Dùng để đếm ký tự (tạm coi \n = 1 ký tự)
+        const titleElement = document.getElementById("typing-title");
+        let i = 0;
+        let isDeleting = false;
 
-/* ⚡ Giai đoạn 1 — Phóng to nhanh khi khởi động */
-@keyframes startZoom {
-    0% {
-        opacity: 0;
-        transform: scale(0.2);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+        function type() {
+            if (!isDeleting) {
+                // Lấy phần text chưa format
+                let currentText = displayTitle.substring(0, i);
+                // Chuyển \n thành <br> để hiển thị đúng
+                let htmlText = currentText.replace(/\n/g, '<br>');
+                titleElement.innerHTML = htmlText;
 
-/* 🔁 Giai đoạn 2 — Phóng to / thu nhỏ lặp lại */
-@keyframes loopZoom {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-</style>
+                i++;
+                if (i > displayTitle.length) {
+                    setTimeout(() => {
+                        isDeleting = true;
+                        type();
+                    }, 2000);
+                    return;
+                }
+            } else {
+                let currentText = displayTitle.substring(0, i);
+                let htmlText = currentText.replace(/\n/g, '<br>');
+                titleElement.innerHTML = htmlText;
+                i--;
+                if (i < 0) {
+                    i = 0;
+                    isDeleting = false;
+                }
+            }
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(type, speed);
+        }
+        type();
+    </script>
 </body>
 </html>
-
-
