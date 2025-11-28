@@ -91,15 +91,43 @@
                 font-size: 14px;
             }
         }
+        .center-link a {
+    font-size: 16px;   /* Giảm hoặc tăng tuỳ ý: 14px – 18px */
+    line-height: 1.4;  /* Giúp chữ không bị dính nhau */
+    display: inline-block;
+    text-align: center;
+}
+.link-box {
+    border: 1px solid #007BFF;     /* viền xanh */
+    padding: 10px 15px;
+    border-radius: 8px;            /* bo góc */
+    display: inline-block;
+    text-align: center;
+    margin: 15px auto;
+    background: #F8FAFF;           /* nền nhẹ */
+    box-shadow: inset 1px 1px 3px #ffffff,
+                inset -1px -1px 3px #b5b5b5; /* giống khung tiêu đề */
+}
+
+.link-box a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    color: #005FDB;
+    line-height: 1.4;
+}
     </style>
 </head>
 <body>
     
     <div class="title-box">
     <h1 id="typing-title"></h1>
-</div>
-      <div style="text-align: center;">
-  <a href="https://nchmf.gov.vn/kttvsite/vi-VN/1/bao-ap-thap-nhiet-doi-2049-15.html" target="_blank" style="text-decoration: none; font-weight: bold; font-size: larger;">Nhấn vào đây <br>(để xem tin mới nhất)</a>
+<div style="text-align: center;">
+    <div class="link-box">
+        <a href="https://nchmf.gov.vn/kttvsite/vi-VN/1/bao-ap-thap-nhiet-doi-2049-15.html" target="_blank">
+            Nhấn vào đây <br>(để xem tin mới nhất)
+        </a>
+    </div>
 </div>
     <img src="img/img.jpeg" alt="Hình trang" style="width:100%; height:auto; display:block; margin:0; padding:0;">  
     
