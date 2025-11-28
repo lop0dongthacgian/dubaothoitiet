@@ -2,14 +2,12 @@ const marqueeConfig = {
     // Chữ chạy phía trên (màu vàng) – hỗ trợ nhiều câu luân phiên
     topMarquee: {
         texts: [
-            "Bộ Nông nghiệp và Môi trường đã đưa ra 3 kịch bản của bão 15. Theo đó, kịch bản 1: Khả năng cao nhất hiện nay bão đổi hướng Bắc khi đến vùng biển Tây Bắc đặc khu Trường Sa (cách bờ biển Gia Lai-Khánh Hòa khoảng 500km về phía Đông (xác suất 70%); kịch bản 2 xấu hơn, bão không đổi hướng mà đi vào khu vực Gia Lai - Khánh Hòa (xác suất 20%); kịch bản 3 (xác suất 10%), bão tan trên biển, không ảnh hưởng đến đất liền nước ta cả về mưa và gió",
-            
-            "Công điện số 34/CD-BCĐ-BNNMT ngày 26/11/2025 của Ban Chỉ đạo Phòng thủ dân sự Quốc Gia về việc ứng phó với bão trên Biển Đông (Xem mục Công điện)"
+            "Hiện nay (28/11), một áp thấp nhiệt đới đang hoạt động trên vùng ven biển phía Đông Malaysia. Hồi 13 giờ, vị trí tâm áp thấp nhiệt đới ở vào khoảng 4,1 độ Vĩ Bắc; 104,3 độ Kinh Đông, trên vùng ven biển phía Đông Malaysia. Sức gió mạnh nhất vùng gần tâm áp thấp nhiệt đới mạnh cấp 6-7 (39-61km/giờ), giật cấp 9. Di chuyển theo hướng Đông Bắc với tốc độ khoảng 15km/h."
         ],
         color: "#FFFF00",
         fontSize: "35px",
         speed: 180, // Tốc độ chạy chữ
-        pauseBetween: 2000, // Thời gian dừng giữa các câu (ms)
+        pauseBetween: 0, // Thời gian dừng giữa các câu (ms)
         enabled: true
     },  
     // Chữ chạy phía dưới (màu đỏ) – giữ nguyên
