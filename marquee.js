@@ -2,7 +2,7 @@ const marqueeConfig = {
     // Chữ chạy phía trên (màu vàng) – hỗ trợ nhiều câu luân phiên
     topMarquee: {
         texts: [
-            "Hiện nay (28/11), một áp thấp nhiệt đới đang hoạt động trên vùng ven biển phía Đông Malaysia. Hồi 13 giờ, vị trí tâm áp thấp nhiệt đới ở vào khoảng 4,1 độ Vĩ Bắc; 104,3 độ Kinh Đông, trên vùng ven biển phía Đông Malaysia. Sức gió mạnh nhất vùng gần tâm áp thấp nhiệt đới mạnh cấp 6-7 (39-61km/giờ), giật cấp 9. Di chuyển theo hướng Đông Bắc với tốc độ khoảng 15km/h."
+            "Duyên hải Nam Trung Bộ Nhiệt độ thấp nhất : Phía Bắc 19-22, phía Nam 22-24 độ. Nhiệt độ cao nhất : 25-28 độ, phía Nam có nơi trên 29 độ. Nhiều mây, có mưa rào và dông vài nơi. Gió đông bắc đến bắc cấp 3. Trong mưa dông có khả năng xảy ra lốc, sét và gió giật mạnh. Đêm và sáng sớm trời lạnh"
         ],
         color: "#FFFF00",
         fontSize: "35px",
