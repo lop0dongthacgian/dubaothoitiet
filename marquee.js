@@ -2,7 +2,7 @@ const marqueeConfig = {
     // Chữ chạy phía trên (màu vàng) – hỗ trợ nhiều câu luân phiên
     topMarquee: {
         texts: [
-            "Chiều nay (29/11/2025), áp thấp nhiệt đới đã suy yếu thành một vùng áp thấp trên vùng biển phía Tây Nam khu vực Nam Biển Đông"
+            "Chiều 29/11/2025, áp thấp nhiệt đới đã suy yếu thành một vùng áp thấp trên vùng biển phía Tây Nam khu vực Nam Biển Đông"
         ],
         color: "#FFFF00",
         fontSize: "35px",
