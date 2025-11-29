@@ -2,7 +2,7 @@ const marqueeConfig = {
     // Chữ chạy phía trên (màu vàng) – hỗ trợ nhiều câu luân phiên
     topMarquee: {
         texts: [
-            "Duyên hải Nam Trung Bộ Nhiệt độ thấp nhất : Phía Bắc 19-22 độ, phía Nam 22-24 độ. Nhiệt độ cao nhất : 25-28 độ, phía Nam có nơi trên 29 độ. Nhiều mây, có mưa rào và dông vài nơi. Gió đông bắc đến bắc cấp 3. Trong mưa dông có khả năng xảy ra lốc, sét và gió giật mạnh. Đêm và sáng sớm trời lạnh"
+            "Chiều nay (29/11/2025), áp thấp nhiệt đới đã suy yếu thành một vùng áp thấp trên vùng biển phía Tây Nam khu vực Nam Biển Đông"
         ],
         color: "#FFFF00",
         fontSize: "35px",
