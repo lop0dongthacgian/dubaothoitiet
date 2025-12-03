@@ -2,8 +2,8 @@ const marqueeConfig = {
     // Chữ chạy phía trên (màu vàng) – hỗ trợ nhiều câu luân phiên
     topMarquee: {
         texts: [
-            "Hiện nay (02/12/2025), một bộ phận không khí lạnh ở phía Bắc đang di chuyển xuống phía Nam.",
-            "Gần sáng và sáng 03/12, không khí lạnh sẽ ảnh hưởng đến Đông Bắc Bộ, Bắc Trung Bộ và một số nơi phía Tây Bắc Bộ; sau đó lan sang các khu vực còn lại của Tây Bắc Bộ và một số nơi ở Trung Trung Bộ."
+            
+            "TIN CUỐI CÙNG VỀ CƠN BÃO SỐ 15: Tối ngày 03/12/2025, áp thấp nhiệt đới suy yếu từ cơn bão số 15 đã suy yếu thành một vùng áp thấp trên đất liền ven biển các tỉnh Đắk Lắk - Khánh Hòa."
         ],
         color: "#FFFF00",
         fontSize: "35px",
