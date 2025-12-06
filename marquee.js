@@ -3,7 +3,7 @@ const marqueeConfig = {
     topMarquee: {
         texts: [
             
-            "TIN CUỐI CÙNG VỀ CƠN BÃO SỐ 15: Tối ngày 03/12/2025, áp thấp nhiệt đới suy yếu từ cơn bão số 15 đã suy yếu thành một vùng áp thấp trên đất liền ven biển các tỉnh Đắk Lắk - Khánh Hòa."
+            "Áp thấp nhiệt đới đang hoạt động phía Đông miền Trung Philippines, vui lòng theo dõi tin cập nhật hàng ngày!"
         ],
         color: "#FFFF00",
         fontSize: "35px",
