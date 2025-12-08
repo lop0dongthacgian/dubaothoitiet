@@ -3,7 +3,7 @@ const marqueeConfig = {
     topMarquee: {
         texts: [
             
-            "TIN CUỐI CÙNG VỀ ÁP THẤP NHIỆT ĐỚI: Chiều nay (08/12/2025), áp thấp nhiệt đới trên khu vực miền Trung Phi-lip-pin đã suy yếu thành một vùng áp thấp."
+            "TIN CUỐI CÙNG VỀ ÁP THẤP NHIỆT ĐỚI: Chiều ngày 08/12/2025, áp thấp nhiệt đới trên khu vực miền Trung Phi-lip-pin đã suy yếu thành một vùng áp thấp."
         ],
         color: "#FFFF00",
         fontSize: "35px",
@@ -157,3 +157,4 @@ if (document.readyState === 'loading') {
 } else {
     initMarquee();
 }
+
