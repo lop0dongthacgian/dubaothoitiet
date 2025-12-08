@@ -3,7 +3,7 @@ const marqueeConfig = {
     topMarquee: {
         texts: [
             
-            "Áp thấp nhiệt đới đang hoạt động phía Đông miền Trung Philippines, vui lòng theo dõi tin cập nhật hàng ngày!"
+            "TIN CUỐI CÙNG VỀ ÁP THẤP NHIỆT ĐỚI: Chiều nay (08/12/2025), áp thấp nhiệt đới trên khu vực miền Trung Phi-lip-pin đã suy yếu thành một vùng áp thấp."
         ],
         color: "#FFFF00",
         fontSize: "35px",
